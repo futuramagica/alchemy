@@ -1,0 +1,12 @@
+﻿Build started 2/9/2015 10:33:02 PM.
+     1>Project "c:\Users\Oleg\documents\visual studio 2010\Projects\HMI\HMI_Interface\HMI_Interface.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\HMI_Interface.unsuccessfulbuild".
+       FinalizeBuildStatus:
+         Deleting file "Debug\HMI_Interface.unsuccessfulbuild".
+         Touching "Debug\HMI_Interface.lastbuildstate".
+     1>Done Building Project "c:\Users\Oleg\documents\visual studio 2010\Projects\HMI\HMI_Interface\HMI_Interface.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.03

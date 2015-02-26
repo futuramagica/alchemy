@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HMI", "HMI\HMI.vcxproj", "{08B7C2FA-13AB-460A-92AA-260CD7783402}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HMI_Interface", "HMI_Interface\HMI_Interface.vcxproj", "{9357DF33-97E8-406E-A987-30A195FCF634}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08B7C2FA-13AB-460A-92AA-260CD7783402}.Debug|Win32.ActiveCfg = Debug|Win32
+		{08B7C2FA-13AB-460A-92AA-260CD7783402}.Debug|Win32.Build.0 = Debug|Win32
+		{08B7C2FA-13AB-460A-92AA-260CD7783402}.Release|Win32.ActiveCfg = Release|Win32
+		{08B7C2FA-13AB-460A-92AA-260CD7783402}.Release|Win32.Build.0 = Release|Win32
+		{9357DF33-97E8-406E-A987-30A195FCF634}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9357DF33-97E8-406E-A987-30A195FCF634}.Debug|Win32.Build.0 = Debug|Win32
+		{9357DF33-97E8-406E-A987-30A195FCF634}.Release|Win32.ActiveCfg = Release|Win32
+		{9357DF33-97E8-406E-A987-30A195FCF634}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
