@@ -39,6 +39,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\HMI;C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\Platform;C:\Users\Oleg\Documents\Projects\EyeTribe\tet-cpp-client-master\include;C:\boost\include\boost-1_57\boost;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Oleg\Documents\Projects\EyeTribe\tet-cpp-client-master\Debug;C:\boost\lib;C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -54,6 +56,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>GazeApiLibD.lib;HMI.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -74,6 +77,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="EyeTribeImpl.cpp" />
+    <ClCompile Include="MainTest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EyeTribeImpl.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

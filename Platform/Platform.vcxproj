@@ -38,7 +38,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>true</LinkIncremental>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\HMI;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -75,6 +76,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="EventManager.h" />
+    <ClInclude Include="Event_DataStruct.h" />
     <ClInclude Include="Platform.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -21,5 +21,8 @@
     <ClInclude Include="EventManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Event_DataStruct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
