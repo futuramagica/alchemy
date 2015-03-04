@@ -1,6 +1,6 @@
 #include "EventManager.h"
 #include "HMI_Manager.h"
-
+ 
 class Platform {
 
 public: 

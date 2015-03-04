@@ -1,4 +1,4 @@
-#pragma once
+
 #include <gazeapi.h>
 #include "HMI_Interfaces.h"
 

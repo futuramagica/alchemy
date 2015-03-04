@@ -1,4 +1,4 @@
-class EventManager {
+ class EventManager {
 
 public: 
 	int init();

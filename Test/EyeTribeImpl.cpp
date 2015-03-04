@@ -1,13 +1,9 @@
-#pragma once
-#include "HMI_Interfaces.h"
- 
 #include <gazeapi.h>
-#include "EyeTribeImpl.h"
 
 #include <windows.h>
 #include <iostream>
 
-
+#include "EyeTribeImpl.h"
 
 // void EyeTribeImpl::recog(){
 	 
@@ -57,7 +53,7 @@ void EyeTribeImpl::on_gaze_data( gtl::GazeData const & gazeData )
       //std::cout << "x = " << (smoothedCoordinatesLeftEye.x+ smoothedCoordinatesRightEye.x)/2<< " y = " << (smoothedCoordinatesLeftEye.y+smoothedCoordinatesRightEye.y)/2 << endl;
 	  float x = (smoothedCoordinatesLeftEye.x+ smoothedCoordinatesRightEye.x)/2;
 	  float y = (smoothedCoordinatesLeftEye.y+smoothedCoordinatesRightEye.y)/2;
-	Eye_Recog::callAction( &x,  &y);// call graphics to change 
+	Eye_Recog::callEyeAction( &x,  &y);// call graphics to change 
 
       printf( "\n" );
    }
