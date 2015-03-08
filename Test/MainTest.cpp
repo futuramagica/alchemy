@@ -2,6 +2,7 @@
 #include <iostream>
 #include <windows.h>
 #include "EyeTribeImpl.h"
+#include "SphinxRecogImpl.h"
 
 void action (float *x, float *y);
 
@@ -9,7 +10,9 @@ int main(){
 
 	EyeTribeImpl eyetr(action);
 	
-
+	SphinxRecogImpl impl;
+	impl.init_recog();
+	impl.recognize_from_microphone();
 
 	 while (true)
    {

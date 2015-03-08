@@ -1,7 +1,10 @@
 #include "HMI_DataStruct.h" 
 class Voice_Cmd_Recog{
 public: 
-	virtual void callVoiceAction(voice_cmd_t* cmd);
+	void callVoiceAction(voice_cmd_t* cmd);
+	void setCallVoiceAction(void(*act)(voice_cmd_t*));
+private: 	
+	 void (*action)(voice_cmd_t*);
 };
 
 
@@ -14,6 +17,9 @@ public:
 class Eye_Recog{
 public:
 	 void callEyeAction( float *x, float*y);
-	void (*action)(float*, float*);
+	 void setCallEyeAction(void(*act)(float *x, float*y));
+private: 	
+	 void (*action)(float*, float*);
 };
+
 
