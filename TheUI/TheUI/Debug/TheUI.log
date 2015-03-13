@@ -1,0 +1,33 @@
+﻿Build started 11/02/2015 16:45:05.
+     1>Project "G:\Projects\TheUI\TheUI\TheUI.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\TheUI.unsuccessfulbuild".
+       GenerateTargetFrameworkMonikerAttribute:
+       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+       ClCompile:
+         All outputs are up-to-date.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\TheUI.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt TheUI.cpp /clr:nostdlib 
+         TheUI.cpp
+         All outputs are up-to-date.
+       ResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\projects\TheUI\Debug\TheUI.exe" /INCREMENTAL /NOLOGO glfw3.lib OpenGL32.Lib glu32.lib "g:\Projects\TheUI\TheUI\thirdparty\glew-1.12.0\lib\Release\x64\glew32.lib" "g:\Projects\TheUI\TheUI\thirdparty\glew-1.12.0\lib\Release\x64\glew32s.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\TheUI.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"G:\projects\TheUI\Debug\TheUI.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\app.res
+         Debug\AssemblyInfo.obj
+         Debug\Scene.obj
+         Debug\stdafx.obj
+         Debug\TheUI.obj
+         "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+     1>TheUI.obj : warning LNK4248: unresolved typeref token (01000017) for 'GLFWwindow'; image may not run
+     1>TheUI.obj : warning LNK4248: unresolved typeref token (01000018) for 'GLFWmonitor'; image may not run
+         TheUI.vcxproj -> G:\projects\TheUI\Debug\TheUI.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"G:\projects\TheUI\Debug\TheUI.exe;#1" /manifest Debug\TheUI.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\TheUI.unsuccessfulbuild".
+         Touching "Debug\TheUI.lastbuildstate".
+     1>Done Building Project "G:\Projects\TheUI\TheUI\TheUI.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.06
