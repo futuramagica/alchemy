@@ -1,3 +1,6 @@
+#ifndef _INC_HMI_INTERFACES
+#define _INC_HMI_INTERFACES
+
 #include "HMI_DataStruct.h" 
 class Voice_Cmd_Recog{
 public: 
@@ -23,3 +26,4 @@ private:
 };
 
 
+#endif

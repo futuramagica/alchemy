@@ -19,7 +19,7 @@ EyeTribeImpl::EyeTribeImpl(void(*action)(float *x, float *y))
       mApi.add_listener( *this );
       if ( mApi.is_connected() )
       {
-		  EyeTribeImpl::action = action;
+		  Eye_Recog::setCallEyeAction(action);
          gtl::Screen screen;
          screen.set( 1, 1920, 1080, 0.5003, 0.2814 );
          mApi.set_screen( screen );
@@ -37,7 +37,7 @@ EyeTribeImpl::~EyeTribeImpl()
 
 void EyeTribeImpl::on_gaze_data( gtl::GazeData const & gazeData )
 {
-   printf( "state = %d\n", gazeData.state );
+  // printf( "state = %d\n", gazeData.state );
 
    if( gazeData.state & gtl::GazeData::GD_STATE_TRACKING_GAZE )
    {

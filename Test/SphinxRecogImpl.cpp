@@ -1,9 +1,9 @@
 #include "SphinxRecogImpl.h";
 
-ps_decoder_s * SphinxRecogImpl::ps = NULL;
-cmd_ln_s * SphinxRecogImpl::config = NULL;
+//ps_decoder_s * SphinxRecogImpl::ps = NULL;
+//cmd_ln_s * SphinxRecogImpl::config = NULL;
 
-void SphinxRecogImpl::init_recog(){
+void SphinxRecogImpl::init_recog(void(*act)(voice_cmd_t*)){
 
 	config = cmd_ln_init(NULL, ps_args(), TRUE,
 			     "-hmm", "c:\\Users\\Oleg\\Documents\\Development\\sphinx\\pocketsphinx\\model\\en-us\\en-us",
@@ -18,6 +18,8 @@ void SphinxRecogImpl::init_recog(){
     if (ps == NULL) {
         cmd_ln_free_r(config);
     }
+
+	setCallVoiceAction(act);
 
 };
 
@@ -56,8 +58,16 @@ void SphinxRecogImpl::init_recog(){
             /* speech -> silence transition, time to start new utterance  */
             ps_end_utt(ps);
             hyp = ps_get_hyp(ps, NULL );
-            if (hyp != NULL)
+            if (hyp != NULL){
                 printf("%s\n", hyp);
+			
+				if (strcmp(hyp, "copy")==0){
+					cmd = copy;
+					callVoiceAction(&cmd);
+				}
+				
+			}
+
 
             if (ps_start_utt(ps) < 0)
                 E_FATAL("Failed to start utterance\n");

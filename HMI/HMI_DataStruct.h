@@ -3,8 +3,8 @@
 
 
 struct eye_event{
-	int x;
-	int y;
+	float* x;
+	float* y;
 };
  
 
@@ -17,7 +17,7 @@ struct eye_event{
 enum  voice_cmd_t {start,stop,drop,cut,copy,paste,use};
 
 struct voice_cmd_event{
-	voice_cmd_t voice_cmd;
+	voice_cmd_t* voice_cmd;
 };
 
 #endif  /* _INC_HMI_DATASTRUCTURE */

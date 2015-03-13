@@ -12,20 +12,20 @@
 #include <sphinxbase/ad.h>
 
 #include "pocketsphinx.h"
+#include "HMI_Interfaces.h"
 
-
-class SphinxRecogImpl {
+class SphinxRecogImpl : public Voice_Cmd_Recog{
 
 public: 
 	
-	SphinxRecogImpl();
-	~SphinxRecogImpl();
+	
+	
+	 void init_recog(void(*act)(voice_cmd_t*));
+	 void recognize_from_microphone();
 
-	static void init_recog();
-	static void recognize_from_microphone();
-
-	static	 ps_decoder_t *ps;
-	static	cmd_ln_t *config;
-
+	ps_decoder_t *ps;
+	cmd_ln_t *config;
+	
+	voice_cmd_t cmd;
 };
 
