@@ -29,5 +29,8 @@
     <ClCompile Include="HMI_Interfaces.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="HMI_Manager.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

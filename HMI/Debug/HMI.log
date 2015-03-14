@@ -1,12 +1,14 @@
-﻿Build started 3/1/2015 9:15:04 PM.
-     1>Project "C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\HMI\HMI.vcxproj" on node 4 (build target(s)).
+﻿Build started 3/10/2015 7:29:41 AM.
+     1>Project "C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\HMI\HMI.vcxproj" on node 3 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\HMI.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D HMI_EXPORTS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt HMI_Interfaces.cpp
-         HMI_Interfaces.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D HMI_EXPORTS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt HMI_Manager.cpp
+         HMI_Manager.cpp
+     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\hmi\hmi_manager.cpp(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
        Lib:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\Debug\HMI.lib" /NOLOGO Debug\HMI_Interfaces.obj
+         Debug\HMI_Manager.obj
          HMI.vcxproj -> C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\Debug\HMI.lib
        FinalizeBuildStatus:
          Deleting file "Debug\HMI.unsuccessfulbuild".
@@ -15,4 +17,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.12
+Time Elapsed 00:00:00.42
