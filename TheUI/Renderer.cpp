@@ -14,7 +14,11 @@ using namespace glm;
 
 void Renderer::DrawRectangle(RectangleInfo* info)
 {
+	//client states enabled x3
 	glEnable(GL_TEXTURE_2D);
+	glEnableClientState(GL_VERTEX_ARRAY);
+	glEnableClientState(GL_COLOR_ARRAY);
+
 	GLfloat thickness=info->thickness;
 	GLfloat left=(double)info->x/(double)width;
 	GLfloat right=(double)(info->x+info->width)/width;
@@ -41,8 +45,13 @@ void Renderer::DrawRectangle(RectangleInfo* info)
 
 
 
-	glDrawArrays(GL_LINE_LOOP, 0, 4); 
+	glDrawArrays(GL_LINE_LOOP, 0, 4);
+
 	glDisableVertexAttribArray(0);
+	glDeleteBuffers(1, &vertexbuffer);
+	glDeleteVertexArrays(1, &VertexArrayID);
+	
+	//client states disabled x3
 	glDisableClientState(GL_VERTEX_ARRAY);
 	glDisableClientState(GL_COLOR_ARRAY);
 	glDisable(GL_TEXTURE_2D);

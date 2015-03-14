@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "SimpleList.h"
-//#include "stdafx.h"
+#include "stdafx.h"
 
 
 #include "glew-1.12.0\include\GL\glew.h"
@@ -11,25 +11,25 @@
 
 // Include GLM
 #include "glm-0.9.4.0\glm\glm.hpp"
-//using namespace glm;
-
-SimpleList::SimpleList(int x_, int y_ , int width_, int height_){
+using namespace glm;
+SimpleList::SimpleList(int x_, int y_ , int width_, int height_)
+ {
 	 x=x_;
 	 y=y_;
 	 height=height_;
 	 width=width_;
- };
+ }
 
 void SimpleList::OnEvent(int code)
 {
 
 	highlighted=!highlighted;
-};
+}
 
 void SimpleList::Display()
 {
 	printf("%i,%i",x,y);
-};
+}
 
 void SimpleList::Draw(Renderer* r)
 {
@@ -43,9 +43,9 @@ void SimpleList::Draw(Renderer* r)
 	ri.height=highlighted?height*1.3:height;
 	ri.thickness=highlighted? 3:1;
 	r->DrawRectangle(&ri);
-	
 
 
-};
+
+}
 
 

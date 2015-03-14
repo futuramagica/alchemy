@@ -48,40 +48,24 @@ int main(array<System::String ^> ^args)
 		return -1;
 	}
 
-	// Ensure we can capture the escape key being pressed below
 	glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
 
-	// Dark blue background
-/*	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
-	//Triangles
-	GLuint VertexArrayID;
-	glGenVertexArrays(1, &VertexArrayID);
-	glBindVertexArray(VertexArrayID);
-
-	// Create and compile our GLSL program from the shaders
-	
-
-
-	static const GLfloat g_vertex_buffer_data[] = { 
-		-1.0f, -1.0f, 0.0f,
-		 1.0f, -1.0f, 0.0f,
-		 0.0f,  1.0f, 0.0f,
-	};
-
-	GLuint vertexbuffer;
-	glGenBuffers(1, &vertexbuffer);
-	glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_buffer_data, GL_STATIC_DRAW);
-
-	*/
+	Scene MainScene(&r);
 	SimpleList l1(-200,-275,400,100);
+	SimpleList l2(300,400,200,200);
+	SimpleList l3(-300,-300,50,50);
 	l1.highlighted=false;
-	
+	l2.highlighted=false;
+	MainScene.AddElement(&l1);
+	MainScene.AddElement(&l2);
+	MainScene.AddElement(&l3);
+	printf("%i\n",MainScene.ElementCount());
+	glClearColor(0.1f, 0.5f, 0.7f, 0.0f);
 	do{
-		glClearColor(0.1f, 0.5f, 0.7f, 0.0f);
+		
 	glClear(GL_COLOR_BUFFER_BIT );
-		l1.Draw(&r);
-
+	//	l1.Draw(&r);
+		MainScene.Draw();
 		
 		glfwSwapBuffers(window);
 		glfwPollEvents();
@@ -97,18 +81,7 @@ int main(array<System::String ^> ^args)
 
 	// Close OpenGL window and terminate GLFW
 	glfwTerminate();
-	/*Scene MainScene;
-	SimpleList l1(5,5,50,50);
-	SimpleList l2(100,100,60,60);
-	MainScene.AddElement(&l1);
-	MainScene.AddElement(&l2);
-	MainScene.Debug();
 
-	int a=333;
-	LinkedList<int> ll;
-	ll.AddElement(&a);
-	int b=*(ll.Last());
-	printf("%i\n",b);*/
 	system("pause");
     return 0;
 }
