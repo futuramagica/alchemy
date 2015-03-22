@@ -20,16 +20,19 @@ void Renderer::DrawRectangle(RectangleInfo* info)
 	glEnableClientState(GL_COLOR_ARRAY);
 
 	GLfloat thickness=info->thickness;
-	GLfloat left=(double)info->x/(double)width;
-	GLfloat right=(double)(info->x+info->width)/width;
-	GLfloat top=(double)info->y/height;
-	GLfloat bottom=(double)(info->y+info->height)/height;
-	printf("%f\t%f\t%f\t%f",left,right,top,bottom);
+	GLfloat left=(double)info->y/(double)(height/2);
+	GLfloat right=(double)(info->y+info->height)/(height/2);
+	GLfloat top=(double)info->x/(width/2);
+	GLfloat bottom=(double)(info->x+info->width)/(width/2);
+	//printf("%f\t%f\t%f\t%f",left,right,top,bottom);
+
+	//TODO: figure out how to PROPERLY work with coordinate systems
+
 	GLfloat g_vertex_buffer_data[] = { 
-		top, left,0.0f,
-		 top, right, 0.0f,
-		 bottom,  right,0.0f, 
-		 bottom, left,0.0f
+		top, -left,0.0f,
+		 top, -right, 0.0f,
+		 bottom,  -right,0.0f, 
+		 bottom, -left,0.0f
 	};
 	GLuint VertexArrayID;
 	glGenVertexArrays(1, &VertexArrayID);
@@ -61,3 +64,10 @@ Renderer::Renderer(int w, int h)
 	width=w;
 	height=h;
 }
+/*bool Renderer::WithinRectangle(RectangleInfo* ri, int x, int y)
+{
+	printf("Address: %p\n",ri);
+	printf("Call to withinrectangle for x=%i,y=%i, rectangle defined by x=%i,y=%i,width=%i,height=%i,thickness=%f\n",x,y,ri->x,ri->y,ri->width,ri->height,ri->thickness);
+	//system("pause");
+	return (ri->x<=x)&&(x<=ri->x+ri->width)&&(y>=ri->y)&&(y<=ri->y+ri->height);
+}*/

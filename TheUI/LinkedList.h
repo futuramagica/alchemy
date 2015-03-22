@@ -1,3 +1,5 @@
+#ifndef LINKEDLIST_H
+#define LINKEDLIST_H
 #include <stdio.h>
 #include <stdlib.h>
 template <class T>
@@ -20,16 +22,16 @@ private:
 public:
 	int Size()
 	{	
-		printf("Size() call\n");
+		//printf("Size() call\n");
 		int r=0;
-		printf ("root=%i\n",root);
+		//printf ("root=%i\n",root);
 		if (root!=nullptr)
 		{
 			r++;
 			ListNode<T>* current=root;
 			while (current->next!=nullptr)
 			{
-				printf("Size(): iterating...\n");
+				//printf("Size(): iterating...\n");
 				current=current->next;
 				r++;
 			}
@@ -40,18 +42,18 @@ public:
 
 	LinkedList()
 	{
-		printf("%s","hurr\n");
+		//printf("%s","hurr\n");
 		root=nullptr;
 		currentnode=nullptr;
 	}
 T* Next()
 {
-	printf("Next()\n");
-	printf("currentnode=%i",currentnode);
+	//printf("Next()\n");
+	//printf("currentnode=%i",currentnode);
 	if (currentnode==nullptr)
 	{
 		currentnode=root;
-		printf ("currentnode is null, returning root\n");
+		//printf ("currentnode is null, returning root\n");
 	}
 	else
 
@@ -59,7 +61,7 @@ T* Next()
 		currentnode=currentnode->next;
 	}
 
-	printf ("address of currentnode to be returned:%i\n",currentnode);
+	//printf ("address of currentnode to be returned:%i\n",currentnode);
 
 	T* retval=currentnode->value;
 	if (currentnode->next==nullptr)
@@ -88,10 +90,10 @@ T* Next()
 			while (current->next!=nullptr)
 			{
 
-				printf("Root's next: %î\n", root->next);
+				/*printf("Root's next: %î\n", root->next);
 				printf("Current's next: %i\n", current->next);
 				
-				printf("iterating...\n");
+				printf("iterating...\n");*/
 				current=current->next;
 			}
 			current->next=new ListNode<T>;
@@ -101,3 +103,5 @@ T* Next()
 		}
 	}
 };
+
+#endif

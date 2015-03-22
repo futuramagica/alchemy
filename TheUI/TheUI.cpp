@@ -2,8 +2,10 @@
 
 #include "stdafx.h"
 #include "SimpleList.h"
+
 #include "Scene.h"
 #include "Renderer.h"
+#include "SimpleListElement.h"
 using namespace System;
 // Include standard headers
 #include <stdio.h>
@@ -18,6 +20,9 @@ GLFWwindow* window;
 // Include GLM
 #include "glm-0.9.4.0\glm\glm.hpp"
 using namespace glm;
+
+#include "DummyInput.h"
+#include "MouseInput.h"
 int main(array<System::String ^> ^args)
 {
 
@@ -50,21 +55,22 @@ int main(array<System::String ^> ^args)
 
 	glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
 
-	Scene MainScene(&r);
-	SimpleList l1(-200,-275,400,100);
-	SimpleList l2(300,400,200,200);
-	SimpleList l3(-300,-300,50,50);
+	Scene MainScene(&r,1024,768);
+	SimpleList l1(-300,-200,300,400);
 	l1.highlighted=false;
-	l2.highlighted=false;
+	l1.AddElement(new SimpleListElement(&l1,60,200));
+	l1.AddElement(new SimpleListElement(&l1,60,100));
+	l1.AddElement(new SimpleListElement(&l1,60,100));
+	l1.AddElement(new SimpleListElement(&l1,60,100));
 	MainScene.AddElement(&l1);
-	MainScene.AddElement(&l2);
-	MainScene.AddElement(&l3);
+	MouseInput di (&MainScene);
 	printf("%i\n",MainScene.ElementCount());
 	glClearColor(0.1f, 0.5f, 0.7f, 0.0f);
 	do{
 		
 	glClear(GL_COLOR_BUFFER_BIT );
 	//	l1.Draw(&r);
+		di.Listen(window);
 		MainScene.Draw();
 		
 		glfwSwapBuffers(window);
