@@ -1,6 +1,6 @@
 
 #include <gazeapi.h>
-#include "HMI_Interfaces.h"
+#include "Sol\HMI_Interfaces.h"
 
 
 class EyeTribeImpl: public Eye_Recog, public gtl::IGazeListener {

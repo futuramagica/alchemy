@@ -39,8 +39,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\HMI;C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\Platform;C:\Users\Oleg\Documents\Projects\EyeTribe\tet-cpp-client-master\include;C:\boost\include\boost-1_57\boost;C:\Users\Oleg\Documents\Development\sphinx\sphinxbase\include;C:\Users\Oleg\Documents\Development\sphinx\sphinxbase\include\win32;C:\Users\Oleg\Documents\Development\sphinx\pocketsphinx\include;C:\Users\Oleg\Documents\Development\sphinx\pocketsphinx\src\libpocketsphinx;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Oleg\Documents\Projects\EyeTribe\tet-cpp-client-master\Debug;C:\boost\lib;C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\Debug;C:\Users\Oleg\Documents\Development\sphinx\pocketsphinx\bin\Release;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)\thirdparty;$(SolutionDir)\alchemy;$(SolutionDir)\thirdparty\EyeTribe\include;C:\boost\include\boost-1_57\boost;$(SolutionDir)\thirdparty\sphinx\sphinxbase\include;$(SolutionDir)\thirdparty\sphinx\sphinxbase\include\win32;$(SolutionDir)\thirdparty\sphinx\pocketsphinx\include;$(SolutionDir)\thirdparty\sphinx\pocketsphinx\src\libpocketsphinx;$(SolutionDir)\alchemy\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\EyeTribe\;C:\boost\lib;$(SolutionDir)\Debug;C:\Users\Oleg\Documents\Development\sphinx\pocketsphinx\bin\Release;$(SolutionDir)\thirdparty\glew-1.12.0\lib\Release\Win32\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -56,7 +56,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>GazeApiLibD.lib;HMI.lib;sphinxbase.lib;pocketsphinx.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)thirdparty\EyeTribe\GazeApiLibD.lib;$(SolutionDir)thirdparty\glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;glu32.lib;opengl32.lib;$(SolutionDir)\thirdparty\glew-1.12.0\lib\Release\win32\glew32.lib;$(SolutionDir)\thirdparty\glew-1.12.0\lib\Release\win32\glew32s.lib;alchemy.lib;$(SolutionDir)\thirdparty\sphinx\sphinxbase\sphinxbase.lib;$(SolutionDir)\thirdparty\sphinx\pocketsphinx\pocketsphinx.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -80,6 +80,8 @@
     <ClCompile Include="EyeTribeImpl.cpp" />
     <ClCompile Include="MainTest.cpp" />
     <ClCompile Include="SphinxRecogImpl.cpp" />
+    <ClCompile Include="TheUI.cpp" />
+    <ClCompile Include="THE_UI_EYE.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EyeTribeImpl.h" />

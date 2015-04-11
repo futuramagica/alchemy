@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Hydrargyrum">
+      <UniqueIdentifier>{bfc61d5c-36e7-48e5-a363-a830c2d414bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Hyrargyrum">
+      <UniqueIdentifier>{23e2e39a-5287-4643-848c-3f6f7059b61c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sol">
+      <UniqueIdentifier>{0c5f9920-4fe9-477d-b899-8ec193c69811}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Sol">
+      <UniqueIdentifier>{2d8df503-9371-421d-ab71-fb86660c2b5a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Hyrargyrum\DummyInput.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hyrargyrum\EventInterface.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hyrargyrum\EyeInput.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hyrargyrum\LinkedList.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hyrargyrum\MouseInput.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hyrargyrum\Renderer.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hyrargyrum\resource.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hyrargyrum\Scene.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hyrargyrum\SimpleList.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hyrargyrum\SimpleListElement.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hyrargyrum\UIElement.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hyrargyrum\UserInput.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sol\EyeTribeImpl.h">
+      <Filter>Header Files\Sol</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sol\HMI_DataStruct.h">
+      <Filter>Header Files\Sol</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sol\HMI_Interfaces.h">
+      <Filter>Header Files\Sol</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sol\HMI_Manager.h">
+      <Filter>Header Files\Sol</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Hyrargyrum\Renderer.cpp">
+      <Filter>Source Files\Hydrargyrum</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hyrargyrum\Scene.cpp">
+      <Filter>Source Files\Hydrargyrum</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hyrargyrum\SimpleList.cpp">
+      <Filter>Source Files\Hydrargyrum</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hyrargyrum\SimpleListElement.cpp">
+      <Filter>Source Files\Hydrargyrum</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hyrargyrum\UIElement.cpp">
+      <Filter>Source Files\Hydrargyrum</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hyrargyrum\UserInput.cpp">
+      <Filter>Source Files\Hydrargyrum</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sol\HMI_Interfaces.cpp">
+      <Filter>Source Files\Sol</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sol\HMI_Manager.cpp">
+      <Filter>Source Files\Sol</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

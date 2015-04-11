@@ -1,9 +1,9 @@
-
+/*
 #include <iostream>
 #include <windows.h>
 #include "EyeTribeImpl.h"
 #include "SphinxRecogImpl.h"
-#include "HMI_Manager.h" 
+#include "Sol\HMI_Manager.h" 
 
 
 
@@ -45,7 +45,7 @@ int main(){
 
 void actionEye (float *x, float *y){
 
-std::cout<<"X IS = "<<*x<<" Y IS = "<<*y;
+//std::cout<<"X IS = "<<*x<<" Y IS = "<<*y;
 eye.x=x;
 eye.y=y;
 hmi.update_eye_struct(eye);
@@ -60,3 +60,4 @@ cmd.voice_cmd = c;
 hmi.update_voice_cmd_struct(cmd);
 
 }
+*/

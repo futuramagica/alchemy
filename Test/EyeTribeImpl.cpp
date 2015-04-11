@@ -2,7 +2,7 @@
 
 #include <windows.h>
 #include <iostream>
-
+  
 #include "EyeTribeImpl.h"
 
 // void EyeTribeImpl::recog(){
@@ -45,17 +45,17 @@ void EyeTribeImpl::on_gaze_data( gtl::GazeData const & gazeData )
     
                 // Move GUI point, do hit-testing, log coordinates, etc.
 
-      Sleep(1000);
+      //Sleep(1000);
       gtl::Point2D const & smoothedCoordinatesLeftEye = gazeData.lefteye.avg; // smoothed data from left eye
       gtl::Point2D const & smoothedCoordinatesRightEye=gazeData.righteye.avg; // smoothed data from right eye
-
+	  
       //center values for left and right eyes, respectively.
       //std::cout << "x = " << (smoothedCoordinatesLeftEye.x+ smoothedCoordinatesRightEye.x)/2<< " y = " << (smoothedCoordinatesLeftEye.y+smoothedCoordinatesRightEye.y)/2 << endl;
-	  float x = (smoothedCoordinatesLeftEye.x+ smoothedCoordinatesRightEye.x)/2;
-	  float y = (smoothedCoordinatesLeftEye.y+smoothedCoordinatesRightEye.y)/2;
+	  float x = (smoothedCoordinatesLeftEye.x+ smoothedCoordinatesRightEye.x)/2; //smoothedCoordinates.x;
+	  float y = (smoothedCoordinatesLeftEye.y+smoothedCoordinatesRightEye.y)/2;//smoothedCoordinates.y;
 	Eye_Recog::callEyeAction( &x,  &y);// call graphics to change 
 
-      printf( "\n" );
+   //   printf( "  CALLBACK CALLED \n" );
    }
 }
 

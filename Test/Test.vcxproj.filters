@@ -15,21 +15,27 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="EyeTribeImpl.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="MainTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SphinxRecogImpl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="EyeTribeImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="THE_UI_EYE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TheUI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="EyeTribeImpl.h">
+    <ClInclude Include="SphinxRecogImpl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SphinxRecogImpl.h">
+    <ClInclude Include="EyeTribeImpl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

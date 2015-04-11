@@ -1,17 +1,28 @@
-﻿Build started 3/10/2015 7:32:29 AM.
-     1>Project "C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\Test\Test.vcxproj" on node 2 (build target(s)).
+﻿Build started 4/11/2015 7:56:48 AM.
+     1>Project "C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\Test\Test.vcxproj" on node 3 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\Test.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt MainTest.cpp
-         MainTest.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt THE_UI_EYE.cpp TheUI.cpp
+         TheUI.cpp
+     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\hydrargyrum\mouseinput.h(16): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\hydrargyrum\mouseinput.h(16): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+         THE_UI_EYE.cpp
+         Generating Code...
        ManifestResourceCompile:
          All outputs are up-to-date.
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\Debug\Test.exe" /INCREMENTAL /NOLOGO GazeApiLibD.lib HMI.lib sphinxbase.lib pocketsphinx.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Test.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\Debug\Test.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\Debug\Test.lib" /MACHINE:X86 Debug\Test.exe.embed.manifest.res
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\Debug\Test.exe" /INCREMENTAL /NOLOGO "C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\thirdparty\EyeTribe\GazeApiLibD.lib" "C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\thirdparty\glfw3.lib" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib glu32.lib opengl32.lib "C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\\thirdparty\glew-1.12.0\lib\Release\win32\glew32.lib" "C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\\thirdparty\glew-1.12.0\lib\Release\win32\glew32s.lib" alchemy.lib "C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\\thirdparty\sphinx\sphinxbase\sphinxbase.lib" "C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\\thirdparty\sphinx\pocketsphinx\pocketsphinx.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Test.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\Debug\Test.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\Debug\Test.lib" /MACHINE:X86 Debug\Test.exe.embed.manifest.res
          Debug\EyeTribeImpl.obj
          Debug\MainTest.obj
          Debug\SphinxRecogImpl.obj
+         Debug\TheUI.obj
+         Debug\THE_UI_EYE.obj
+     1>EyeTribeImpl.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+     1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+     1>GazeApiLibD.lib(gazeapi.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'GazeApiLibD.lib(gazeapi.obj)' or at 'C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\Debug\vc100.pdb'; linking object as if no debug info
+     1>GazeApiLibD.lib(gazeapi_parser.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'GazeApiLibD.lib(gazeapi_parser.obj)' or at 'C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\Debug\vc100.pdb'; linking object as if no debug info
+     1>GazeApiLibD.lib(gazeapi_socket.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'GazeApiLibD.lib(gazeapi_socket.obj)' or at 'C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\Debug\vc100.pdb'; linking object as if no debug info
        Manifest:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\Test.exe.embed.manifest" /manifest Debug\Test.exe.intermediate.manifest
          All outputs are up-to-date.
@@ -25,4 +36,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.03
+Time Elapsed 00:00:01.17

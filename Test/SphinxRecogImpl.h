@@ -12,7 +12,7 @@
 #include <sphinxbase/ad.h>
 
 #include "pocketsphinx.h"
-#include "HMI_Interfaces.h"
+#include "Sol\HMI_Interfaces.h"
 
 class SphinxRecogImpl : public Voice_Cmd_Recog{
 

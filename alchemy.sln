@@ -1,13 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual C++ Express 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HMI", "HMI\HMI.vcxproj", "{08B7C2FA-13AB-460A-92AA-260CD7783402}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Platform", "Platform\Platform.vcxproj", "{D7D5F595-27F5-4E5C-B7E0-721054B90B49}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "Test\Test.vcxproj", "{129DCE00-9429-45AB-AB38-7862499192E9}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TheUI", "TheUI\TheUI.vcxproj", "{20CF60A1-79AE-4308-BEBA-2EC7919AFC5C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "alchemy", "alchemy\alchemy.vcxproj", "{20CF60A1-79AE-4308-BEBA-2EC7919AFC5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,14 +11,6 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{08B7C2FA-13AB-460A-92AA-260CD7783402}.Debug|Win32.ActiveCfg = Debug|Win32
-		{08B7C2FA-13AB-460A-92AA-260CD7783402}.Debug|Win32.Build.0 = Debug|Win32
-		{08B7C2FA-13AB-460A-92AA-260CD7783402}.Release|Win32.ActiveCfg = Release|Win32
-		{08B7C2FA-13AB-460A-92AA-260CD7783402}.Release|Win32.Build.0 = Release|Win32
-		{D7D5F595-27F5-4E5C-B7E0-721054B90B49}.Debug|Win32.ActiveCfg = Debug|Win32
-		{D7D5F595-27F5-4E5C-B7E0-721054B90B49}.Debug|Win32.Build.0 = Debug|Win32
-		{D7D5F595-27F5-4E5C-B7E0-721054B90B49}.Release|Win32.ActiveCfg = Release|Win32
-		{D7D5F595-27F5-4E5C-B7E0-721054B90B49}.Release|Win32.Build.0 = Release|Win32
 		{129DCE00-9429-45AB-AB38-7862499192E9}.Debug|Win32.ActiveCfg = Debug|Win32
 		{129DCE00-9429-45AB-AB38-7862499192E9}.Debug|Win32.Build.0 = Debug|Win32
 		{129DCE00-9429-45AB-AB38-7862499192E9}.Release|Win32.ActiveCfg = Release|Win32
