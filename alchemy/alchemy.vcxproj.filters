@@ -25,57 +25,78 @@
     <Filter Include="Header Files\Sol">
       <UniqueIdentifier>{2d8df503-9371-421d-ab71-fb86660c2b5a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Prima">
+      <UniqueIdentifier>{025c6c93-5b76-4ba9-8a92-ad7794b6218c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Hyrargyrum\DummyInput.h">
-      <Filter>Header Files\Hyrargyrum</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Hyrargyrum\EventInterface.h">
-      <Filter>Header Files\Hyrargyrum</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Hyrargyrum\EyeInput.h">
-      <Filter>Header Files\Hyrargyrum</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Hyrargyrum\LinkedList.h">
-      <Filter>Header Files\Hyrargyrum</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Hyrargyrum\MouseInput.h">
-      <Filter>Header Files\Hyrargyrum</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Hyrargyrum\Renderer.h">
-      <Filter>Header Files\Hyrargyrum</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Hyrargyrum\resource.h">
-      <Filter>Header Files\Hyrargyrum</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Hyrargyrum\Scene.h">
-      <Filter>Header Files\Hyrargyrum</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Hyrargyrum\SimpleList.h">
-      <Filter>Header Files\Hyrargyrum</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Hyrargyrum\SimpleListElement.h">
-      <Filter>Header Files\Hyrargyrum</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Hyrargyrum\UIElement.h">
-      <Filter>Header Files\Hyrargyrum</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Hyrargyrum\UserInput.h">
-      <Filter>Header Files\Hyrargyrum</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Sol\EyeTribeImpl.h">
-      <Filter>Header Files\Sol</Filter>
-    </ClInclude>
     <ClInclude Include="include\Sol\HMI_DataStruct.h">
       <Filter>Header Files\Sol</Filter>
     </ClInclude>
     <ClInclude Include="include\Sol\HMI_Interfaces.h">
       <Filter>Header Files\Sol</Filter>
     </ClInclude>
-    <ClInclude Include="include\Sol\HMI_Manager.h">
+    <ClInclude Include="src\Prima\Prima.h">
+      <Filter>Header Files\Prima</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hydrargyrum\DummyInput.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hydrargyrum\EventInterface.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hydrargyrum\EyeInput.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hydrargyrum\LinkedList.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hydrargyrum\MouseInput.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hydrargyrum\Renderer.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hydrargyrum\Scene.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hydrargyrum\SimpleList.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hydrargyrum\SimpleListElement.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hydrargyrum\UIElement.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hydrargyrum\UserInput.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hydrargyrum\UIDataStructures.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hydrargyrum\Hyrargyrum.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hydrargyrum\Compositor.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hydrargyrum\Space.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hydrargyrum\Cube.h">
+      <Filter>Header Files\Hyrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sol\Sol.h">
+      <Filter>Header Files\Sol</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sol\Event_Manager.h">
+      <Filter>Header Files\Sol</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sol\HMI_Events.h">
       <Filter>Header Files\Sol</Filter>
     </ClInclude>
   </ItemGroup>

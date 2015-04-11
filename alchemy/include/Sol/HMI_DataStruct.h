@@ -8,13 +8,15 @@ struct eye_event{
 };
  
 
-//enum gesture_t {select, wave_up, wave_down, wave_left, wave_right};
+enum gesture_t {click, move};
 
-//typedef struct gesture_event{
-//	gesture_t gesture;
-//};
+struct gesture_event{
+	gesture_t* gesture;
+	double x_move;
+	double y_move;
+};
 
-enum  voice_cmd_t {start,stop,drop,cut,copy,paste,use};
+enum  voice_cmd_t {sel};
 
 struct voice_cmd_event{
 	voice_cmd_t* voice_cmd;

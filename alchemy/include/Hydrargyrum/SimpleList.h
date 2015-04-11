@@ -12,7 +12,12 @@ public:
 	SimpleList(int x_, int y_ , int height_, int width_);
 	void Display();
 	void Draw(Renderer* r) ;
-	void OnEvent(int code);
+	void onEvent(int code);
+
+	void onEyeEvent (eye_event* e);
+	void onVoiceEvent (voice_cmd_event* v);
+	void onGestureEvent (gesture_event* g);
+
 
 	void AddElement(UIElement* e);
 

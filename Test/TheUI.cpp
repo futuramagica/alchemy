@@ -81,7 +81,7 @@ int main()
 		{
 			printf("space\n");
 			EventInterface* e=&l1;
-			e->OnEvent(0);
+			e->onEvent(0);
 		}
 	} // Check if the ESC key was pressed or the window was closed
 	while( glfwGetKey(window, GLFW_KEY_ESCAPE ) != GLFW_PRESS &&

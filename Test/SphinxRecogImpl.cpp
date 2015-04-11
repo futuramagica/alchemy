@@ -62,7 +62,7 @@ void SphinxRecogImpl::init_recog(void(*act)(voice_cmd_t*)){
                 printf("%s\n", hyp);
 			
 				if (strcmp(hyp, "copy")==0){
-					cmd = copy;
+					cmd = sel;
 					callVoiceAction(&cmd);
 				}
 				

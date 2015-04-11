@@ -82,22 +82,28 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Hyrargyrum\DummyInput.h" />
-    <ClInclude Include="include\Hyrargyrum\EventInterface.h" />
-    <ClInclude Include="include\Hyrargyrum\EyeInput.h" />
-    <ClInclude Include="include\Hyrargyrum\LinkedList.h" />
-    <ClInclude Include="include\Hyrargyrum\MouseInput.h" />
-    <ClInclude Include="include\Hyrargyrum\Renderer.h" />
-    <ClInclude Include="include\Hyrargyrum\resource.h" />
-    <ClInclude Include="include\Hyrargyrum\Scene.h" />
-    <ClInclude Include="include\Hyrargyrum\SimpleList.h" />
-    <ClInclude Include="include\Hyrargyrum\SimpleListElement.h" />
-    <ClInclude Include="include\Hyrargyrum\UIElement.h" />
-    <ClInclude Include="include\Hyrargyrum\UserInput.h" />
-    <ClInclude Include="include\Sol\EyeTribeImpl.h" />
+    <ClInclude Include="include\Hydrargyrum\Compositor.h" />
+    <ClInclude Include="include\Hydrargyrum\Cube.h" />
+    <ClInclude Include="include\Hydrargyrum\DummyInput.h" />
+    <ClInclude Include="include\Hydrargyrum\EventInterface.h" />
+    <ClInclude Include="include\Hydrargyrum\EyeInput.h" />
+    <ClInclude Include="include\Hydrargyrum\Hyrargyrum.h" />
+    <ClInclude Include="include\Hydrargyrum\LinkedList.h" />
+    <ClInclude Include="include\Hydrargyrum\MouseInput.h" />
+    <ClInclude Include="include\Hydrargyrum\Renderer.h" />
+    <ClInclude Include="include\Hydrargyrum\Scene.h" />
+    <ClInclude Include="include\Hydrargyrum\SimpleList.h" />
+    <ClInclude Include="include\Hydrargyrum\SimpleListElement.h" />
+    <ClInclude Include="include\Hydrargyrum\Space.h" />
+    <ClInclude Include="include\Hydrargyrum\UIDataStructures.h" />
+    <ClInclude Include="include\Hydrargyrum\UIElement.h" />
+    <ClInclude Include="include\Hydrargyrum\UserInput.h" />
+    <ClInclude Include="include\Sol\Event_Manager.h" />
     <ClInclude Include="include\Sol\HMI_DataStruct.h" />
+    <ClInclude Include="include\Sol\HMI_Events.h" />
     <ClInclude Include="include\Sol\HMI_Interfaces.h" />
-    <ClInclude Include="include\Sol\HMI_Manager.h" />
+    <ClInclude Include="include\Sol\Sol.h" />
+    <ClInclude Include="src\Prima\Prima.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hyrargyrum\Renderer.cpp" />

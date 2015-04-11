@@ -22,7 +22,7 @@ SimpleList::SimpleList(int x_, int y_ , int width_, int height_)
 	 _elementHeight=40;
  }
 
-void SimpleList::OnEvent(int code)
+void SimpleList::onEvent(int code)
 {
 
 	highlighted=!highlighted;
@@ -105,3 +105,15 @@ void SimpleList::MouseOver (int cursorX, int cursorY)
 			}
 	}
 }
+
+
+void SimpleList::onEyeEvent (eye_event* e){
+	printf("on eye");
+};
+void SimpleList::onVoiceEvent (voice_cmd_event* v){
+	printf("on voice");
+};
+void SimpleList::onGestureEvent (gesture_event* g){
+	printf("on gesture");
+
+};
