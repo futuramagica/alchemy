@@ -1,6 +1,4 @@
 
-/*
-
 // TheUI.cpp : main project file.
 
 #include "windows.h"
@@ -32,14 +30,14 @@ using namespace glm;
 
 #include "EyeTribeImpl.h"
 #include <iostream>
-#include "Sol\HMI_Manager.h" 
+#include "Sol\Sol.h" 
 #include "Hydrargyrum\EyeInput.h"
 
 void actionEye		 (float *x, float *y);
 unsigned int __stdcall drawThread(void *arg );
 unsigned int __stdcall eyeThread(void *arg );
 
-HMI_Manager* hmi;
+Sol* hmi;
 eye_event eye;
 
 
@@ -86,7 +84,7 @@ mutex = CreateMutex(0, 0, 0);
 }
 
 unsigned int __stdcall eyeThread(void * args){
-	hmi = new HMI_Manager();
+	hmi = new Sol();
 
 	EyeTribeImpl eyetr(actionEye);
 	
@@ -205,4 +203,3 @@ if ((0<*x<1920)&&(0<*y<1080))  {
 //	ReleaseMutex(mutex);
 };
 
-*/

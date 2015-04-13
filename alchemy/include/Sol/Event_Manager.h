@@ -2,8 +2,8 @@
 // might be used threads here and Qs of pending events with some logic of expiration- but that is for next phases 
 // singleton class 
 
-#ifndef HMI_MANAGER_H
-#define HMI_MANAGER_H
+#ifndef EVENT_MANAGER_H
+#define EVENT_MANAGER_H
 
 class Event_Manager {
 

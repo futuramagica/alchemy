@@ -1,29 +1,22 @@
-﻿Build started 4/11/2015 8:30:30 PM.
+﻿Build started 4/13/2015 8:12:04 AM.
      1>Project "C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\Test\Test.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\Test.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt EyeTribeImpl.cpp SphinxRecogImpl.cpp TheUI.cpp
-         EyeTribeImpl.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt THE_UI_EYE.cpp TheUI.cpp
+         THE_UI_EYE.cpp
      1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\sol\hmi_events.h(11): warning C4624: 'GestureEvent' : destructor could not be generated because a base class destructor is inaccessible
      1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\sol\hmi_events.h(20): warning C4624: 'EyeEvent' : destructor could not be generated because a base class destructor is inaccessible
      1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\sol\hmi_events.h(29): warning C4624: 'VoiceEvent' : destructor could not be generated because a base class destructor is inaccessible
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\test\eyetribeimpl.cpp(24): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\test\eyetribeimpl.cpp(24): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\hydrargyrum\mouseinput.h(16): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\hydrargyrum\mouseinput.h(16): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\hydrargyrum\eyeinput.h(25): warning C4804: '<' : unsafe use of type 'bool' in operation
+     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\hydrargyrum\eyeinput.h(25): warning C4804: '<' : unsafe use of type 'bool' in operation
+     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\test\the_ui_eye.cpp(189): warning C4804: '<' : unsafe use of type 'bool' in operation
+     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\test\the_ui_eye.cpp(189): warning C4804: '<' : unsafe use of type 'bool' in operation
          Generating Code...
-         Compiling...
+         Skipping... (no relevant changes detected)
          TheUI.cpp
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\sol\hmi_events.h(11): warning C4624: 'GestureEvent' : destructor could not be generated because a base class destructor is inaccessible
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\sol\hmi_events.h(20): warning C4624: 'EyeEvent' : destructor could not be generated because a base class destructor is inaccessible
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\sol\hmi_events.h(29): warning C4624: 'VoiceEvent' : destructor could not be generated because a base class destructor is inaccessible
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\hydrargyrum\mouseinput.h(16): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\hydrargyrum\mouseinput.h(16): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
-         SphinxRecogImpl.cpp
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\test\sphinxrecogimpl.cpp(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\sol\hmi_events.h(11): warning C4624: 'GestureEvent' : destructor could not be generated because a base class destructor is inaccessible
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\sol\hmi_events.h(20): warning C4624: 'EyeEvent' : destructor could not be generated because a base class destructor is inaccessible
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\sol\hmi_events.h(29): warning C4624: 'VoiceEvent' : destructor could not be generated because a base class destructor is inaccessible
-         Generating Code...
        ManifestResourceCompile:
          All outputs are up-to-date.
        Link:
@@ -51,4 +44,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.07
+Time Elapsed 00:00:01.54

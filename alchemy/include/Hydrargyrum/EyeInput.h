@@ -4,7 +4,7 @@
 #include "glew-1.12.0\include\GL\glew.h"
 #include "glew-1.12.0\include\GL\wglew.h"
 
-#include "Sol\HMI_Manager.h" 
+#include "Sol\Sol.h" 
 
 #include <ios>
 #include <fstream>
@@ -35,12 +35,12 @@ public:
 		
 	};
 
-	void setHmiManager (HMI_Manager* man){
+	void setHmiManager (Sol* man){
 
 		hmi = man;
 };
 
 private: 
-	HMI_Manager* hmi;
+	Sol* hmi;
 
 };

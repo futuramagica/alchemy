@@ -1,5 +1,6 @@
 #ifndef UIELEMENT_H
 #define UIELEMENT_H
+#pragma once
 #include "Renderer.h"
 #include "UIDataStructures.h"
 
@@ -26,9 +27,7 @@ bool highlighted;
 
  UIElement();
 protected:
-
-	// Please amend this part ot have good structure in place 
-	ui_element structure;
+ui_element element;
 int x;
 int y;
 int width;

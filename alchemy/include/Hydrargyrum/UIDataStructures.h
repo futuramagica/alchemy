@@ -1,7 +1,9 @@
-#include "UIElement.h"
+#ifndef UIDATASTRUCTURES_H
+#define UIDATASTRUCTURES_H
+
 #include <list>
 
-enum ui_orientation {left, right, top, bottom};
+enum ui_orientation {left, right, top, bottom, center};
 
 
 struct ui_elem_pos {
@@ -9,6 +11,7 @@ struct ui_elem_pos {
 	double x;
 	double y;
 };
+
 struct ui_element {
 	double border;
 	int texture;
@@ -22,3 +25,4 @@ struct ui_element {
 struct ui_elements{
 	//std::list<UIElement> *elements;
 };
+#endif

@@ -87,7 +87,7 @@
     <ClInclude Include="include\Hydrargyrum\DummyInput.h" />
     <ClInclude Include="include\Hydrargyrum\EventInterface.h" />
     <ClInclude Include="include\Hydrargyrum\EyeInput.h" />
-    <ClInclude Include="include\Hydrargyrum\Hyrargyrum.h" />
+    <ClInclude Include="include\Hydrargyrum\Hydrargyrum.h" />
     <ClInclude Include="include\Hydrargyrum\LinkedList.h" />
     <ClInclude Include="include\Hydrargyrum\MouseInput.h" />
     <ClInclude Include="include\Hydrargyrum\Renderer.h" />
@@ -98,20 +98,21 @@
     <ClInclude Include="include\Hydrargyrum\UIDataStructures.h" />
     <ClInclude Include="include\Hydrargyrum\UIElement.h" />
     <ClInclude Include="include\Hydrargyrum\UserInput.h" />
+    <ClInclude Include="include\Prima\Prima.h" />
     <ClInclude Include="include\Sol\Event_Manager.h" />
     <ClInclude Include="include\Sol\HMI_DataStruct.h" />
     <ClInclude Include="include\Sol\HMI_Events.h" />
     <ClInclude Include="include\Sol\HMI_Interfaces.h" />
     <ClInclude Include="include\Sol\Sol.h" />
-    <ClInclude Include="src\Prima\Prima.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Hyrargyrum\Renderer.cpp" />
-    <ClCompile Include="src\Hyrargyrum\Scene.cpp" />
-    <ClCompile Include="src\Hyrargyrum\SimpleList.cpp" />
-    <ClCompile Include="src\Hyrargyrum\SimpleListElement.cpp" />
-    <ClCompile Include="src\Hyrargyrum\UIElement.cpp" />
-    <ClCompile Include="src\Hyrargyrum\UserInput.cpp" />
+    <ClCompile Include="src\Hydrargyrum\Renderer.cpp" />
+    <ClCompile Include="src\Hydrargyrum\Scene.cpp" />
+    <ClCompile Include="src\Hydrargyrum\SimpleList.cpp" />
+    <ClCompile Include="src\Hydrargyrum\SimpleListElement.cpp" />
+    <ClCompile Include="src\Hydrargyrum\UIElement.cpp" />
+    <ClCompile Include="src\Hydrargyrum\UserInput.cpp" />
+    <ClCompile Include="src\Prima\Prima.cpp" />
     <ClCompile Include="src\Sol\HMI_Interfaces.cpp" />
     <ClCompile Include="src\Sol\HMI_Manager.cpp" />
   </ItemGroup>

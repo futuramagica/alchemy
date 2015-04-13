@@ -2,8 +2,11 @@
 // it operates also Space and Cube itself 
 // it is singleton 
 
-
+#ifndef COMPOSITOR_H
+#define COMPOSITOR_H
 #include "UIDataStructures.h"
+#include "UIElement.h"
+
 class Compositor {
 
 public: 
@@ -25,4 +28,5 @@ private:
 	~Compositor();
 	ui_elements elements;
 
-}
+};
+#endif
