@@ -131,5 +131,11 @@
     <ClCompile Include="src\Hydrargyrum\UserInput.cpp">
       <Filter>Source Files\Hydrargyrum</Filter>
     </ClCompile>
+    <ClCompile Include="src\Hydrargyrum\Hydrargyrum.cpp">
+      <Filter>Source Files\Hydrargyrum</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sol\Event_Manager.cpp">
+      <Filter>Source Files\Sol</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

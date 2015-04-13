@@ -79,6 +79,7 @@
   <ItemGroup>
     <ClCompile Include="EyeTribeImpl.cpp" />
     <ClCompile Include="MainTest.cpp" />
+    <ClCompile Include="P_Test.cpp" />
     <ClCompile Include="SphinxRecogImpl.cpp" />
     <ClCompile Include="TheUI.cpp" />
     <ClCompile Include="THE_UI_EYE.cpp" />

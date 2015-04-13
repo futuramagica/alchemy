@@ -5,6 +5,7 @@
 #ifndef COMPOSITOR_H
 #define COMPOSITOR_H
 #include "UIDataStructures.h"
+#include "Sol\HMI_DataStruct.h"
 #include "UIElement.h"
 
 class Compositor {

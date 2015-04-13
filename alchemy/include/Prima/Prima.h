@@ -30,25 +30,29 @@ public:
 	Event_Manager* getEvent_Manager();
 	void setEvent_Manager(Event_Manager* e);
 
-protected: 
-	Prima();
-	~Prima();
+private: 
 
+Prima();
+~Prima();
+
+	
+	
+	
 	int checkReadiness(); 
+
 	int startEyeRecog();
 	int startGestureRecog();
 	int startVoiceRecog();
 
-	void initInternallComponents();// called inside init 
 
 
+	int initInternallComponents();// called inside init 
 
-private: 
 
 	
 	// need their setter and getters
 	Sol* sol;
-	Hydrargyrum* hyrargyrum;
+	Hydrargyrum* hydrargyrum;
 	Event_Manager* event_Manager;
 	
 	Voice_Cmd_Recog* voice;

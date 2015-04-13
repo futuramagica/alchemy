@@ -106,6 +106,7 @@
     <ClInclude Include="include\Sol\Sol.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Hydrargyrum\Hydrargyrum.cpp" />
     <ClCompile Include="src\Hydrargyrum\Renderer.cpp" />
     <ClCompile Include="src\Hydrargyrum\Scene.cpp" />
     <ClCompile Include="src\Hydrargyrum\SimpleList.cpp" />
@@ -113,6 +114,7 @@
     <ClCompile Include="src\Hydrargyrum\UIElement.cpp" />
     <ClCompile Include="src\Hydrargyrum\UserInput.cpp" />
     <ClCompile Include="src\Prima\Prima.cpp" />
+    <ClCompile Include="src\Sol\Event_Manager.cpp" />
     <ClCompile Include="src\Sol\HMI_Interfaces.cpp" />
     <ClCompile Include="src\Sol\HMI_Manager.cpp" />
   </ItemGroup>

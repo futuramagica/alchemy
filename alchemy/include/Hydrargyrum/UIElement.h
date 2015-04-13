@@ -1,6 +1,5 @@
 #ifndef UIELEMENT_H
 #define UIELEMENT_H
-#pragma once
 #include "Renderer.h"
 #include "UIDataStructures.h"
 

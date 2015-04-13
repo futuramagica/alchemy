@@ -1,4 +1,4 @@
-
+/*
 // TheUI.cpp : main project file.
 
 #include "windows.h"
@@ -203,3 +203,4 @@ if ((0<*x<1920)&&(0<*y<1080))  {
 //	ReleaseMutex(mutex);
 };
 
+*/

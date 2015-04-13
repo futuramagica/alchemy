@@ -5,14 +5,19 @@
 #ifndef EVENT_MANAGER_H
 #define EVENT_MANAGER_H
 
+#include "Hydrargyrum\Hydrargyrum.h"
+
 class Event_Manager {
 
 public: 
-	Event_Manager getInstance();
+	static Event_Manager* getInstance();
 
 private: 
 
 	Event_Manager(); 
 	~Event_Manager();
+
+	static Event_Manager* event_Manager;
+
 };
 #endif

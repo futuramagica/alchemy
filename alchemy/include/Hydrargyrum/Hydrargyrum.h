@@ -9,7 +9,7 @@
 class Hydrargyrum{
 
 	public:	
-		Hydrargyrum getInstance();
+		static Hydrargyrum* getInstance();
 
 
 	private: 
@@ -17,6 +17,9 @@ class Hydrargyrum{
 		~Hydrargyrum();
 
 		Compositor* compositor;
+
+		static Hydrargyrum* hydrargyrum;
+
 };
 
 #endif

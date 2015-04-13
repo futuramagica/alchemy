@@ -30,6 +30,9 @@
     <ClCompile Include="TheUI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="P_Test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SphinxRecogImpl.h">
