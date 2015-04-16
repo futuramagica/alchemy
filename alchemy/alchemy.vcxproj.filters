@@ -107,9 +107,6 @@
     <ClCompile Include="src\Sol\HMI_Interfaces.cpp">
       <Filter>Source Files\Sol</Filter>
     </ClCompile>
-    <ClCompile Include="src\Sol\HMI_Manager.cpp">
-      <Filter>Source Files\Sol</Filter>
-    </ClCompile>
     <ClCompile Include="src\Prima\Prima.cpp">
       <Filter>Source Files\Prima</Filter>
     </ClCompile>
@@ -135,6 +132,12 @@
       <Filter>Source Files\Hydrargyrum</Filter>
     </ClCompile>
     <ClCompile Include="src\Sol\Event_Manager.cpp">
+      <Filter>Source Files\Sol</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sol\Sol.cpp">
+      <Filter>Source Files\Sol</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sol\HMI_Events.cpp">
       <Filter>Source Files\Sol</Filter>
     </ClCompile>
   </ItemGroup>

@@ -5,34 +5,36 @@
   
 #include "EyeTribeImpl.h"
 
-// void EyeTribeImpl::recog(){
-	 
-	// callAction();  
-//}
 
 
+EyeTribeImpl::EyeTribeImpl(){
+};
 
-EyeTribeImpl::EyeTribeImpl(void(*action)(float *x, float *y))
-{
-   if( mApi.connect( true ) )
+
+ void EyeTribeImpl::startRecognition(){
+	 if( mApi.connect( true ) )
    {
       mApi.add_listener( *this );
       if ( mApi.is_connected() )
       {
-		  Eye_Recog::setCallEyeAction(action);
+
          gtl::Screen screen;
          screen.set( 1, 1920, 1080, 0.5003, 0.2814 );
          mApi.set_screen( screen );
       }
    }
-}
-
+};
+ 
+ void EyeTribeImpl::stopRecognition(){
+	 mApi.remove_listener( *this );
+	 mApi.disconnect();
+ };
 
 EyeTribeImpl::~EyeTribeImpl()
 {
    mApi.remove_listener( *this );
    mApi.disconnect();
-}
+};
 
 
 void EyeTribeImpl::on_gaze_data( gtl::GazeData const & gazeData )
@@ -53,7 +55,12 @@ void EyeTribeImpl::on_gaze_data( gtl::GazeData const & gazeData )
       //std::cout << "x = " << (smoothedCoordinatesLeftEye.x+ smoothedCoordinatesRightEye.x)/2<< " y = " << (smoothedCoordinatesLeftEye.y+smoothedCoordinatesRightEye.y)/2 << endl;
 	  float x = (smoothedCoordinatesLeftEye.x+ smoothedCoordinatesRightEye.x)/2; //smoothedCoordinates.x;
 	  float y = (smoothedCoordinatesLeftEye.y+smoothedCoordinatesRightEye.y)/2;//smoothedCoordinates.y;
-	Eye_Recog::callEyeAction( &x,  &y);// call graphics to change 
+//	Eye_Recog::callEyeAction( &x,  &y);// call graphics to change 
+
+	  eye_event e;
+	  e.x=x;
+	  e.y=y;
+	  Eye_Recog::notifyChange(e);
 
    //   printf( "  CALLBACK CALLED \n" );
    }

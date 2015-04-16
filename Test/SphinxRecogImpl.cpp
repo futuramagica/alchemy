@@ -19,7 +19,7 @@ void SphinxRecogImpl::init_recog(void(*act)(voice_cmd_t*)){
         cmd_ln_free_r(config);
     }
 
-	setCallVoiceAction(act);
+//	setCallVoiceAction(act);
 
 };
 
@@ -63,7 +63,7 @@ void SphinxRecogImpl::init_recog(void(*act)(voice_cmd_t*)){
 			
 				if (strcmp(hyp, "copy")==0){
 					cmd = sel;
-					callVoiceAction(&cmd);
+//					callVoiceAction(&cmd);
 				}
 				
 			}

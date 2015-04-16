@@ -6,7 +6,11 @@
 
 #include "Sol\Sol.h"
 #include "Sol\Event_Manager.h"
+#include "Sol\HMI_Events.h"
 #include "Hydrargyrum\Hydrargyrum.h"
+#include "windows.h"
+#include "process.h"
+
 
 class Prima{
 	
@@ -20,6 +24,20 @@ public:
 
 	int destroy();
 	void stop();
+	
+	
+	Voice_Cmd_Recog* getVoice_Cmd_Recog();
+	void setVoice_Cmd_Recog(Voice_Cmd_Recog* cmd);
+
+	Eye_Recog* getEye_Recog();
+	void setEye_Recog(Eye_Recog* e);
+
+	Gesture_Recog* getGesture_Recog();
+	void setGesture_Recog(Gesture_Recog* g);
+
+
+
+protected: 
 
 	Sol* getSol();
 	void setSol(Sol* s);
@@ -32,32 +50,26 @@ public:
 
 private: 
 
-Prima();
-~Prima();
+	Prima();
+	~Prima();
 
-	
-	
-	
 	int checkReadiness(); 
-
-	int startEyeRecog();
-	int startGestureRecog();
-	int startVoiceRecog();
-
-
 
 	int initInternallComponents();// called inside init 
 
-
-	
 	// need their setter and getters
 	Sol* sol;
 	Hydrargyrum* hydrargyrum;
 	Event_Manager* event_Manager;
 	
+	EyeEvent* ee;
+
+
 	Voice_Cmd_Recog* voice;
 	Eye_Recog* eye;
 	Gesture_Recog* gesture;
+	
+	
 
 
 	static Prima* prima;

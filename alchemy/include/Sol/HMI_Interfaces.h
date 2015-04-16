@@ -8,17 +8,11 @@ class Voice_Cmd_Recog{
 public: 
 	//that is only method should be used 
 	void notifyChange (voice_cmd_t* cmd);
-	// virtual void runChange();
-
-	// both deprecated - should be removed 
-	void callVoiceAction(voice_cmd_t* cmd);
-	void setCallVoiceAction(void(*act)(voice_cmd_t*));
-
+	//virtual void startRecognition();
 protected: 
 	void setVoiceEvent(VoiceEvent* voiceEvent);// deprectated 
 
 private: 	
-	 void (*action)(voice_cmd_t*);
 	 VoiceEvent* voiceEvent;
 
 };
@@ -41,18 +35,13 @@ private:
 class Eye_Recog{
 public:
 	//that is only method should be used 
-	void notifyChange (eye_event* e);
-	// virtual void runChange();
-
-	// both deprecated - should be removed 
-	void callEyeAction( float *x, float*y);
-	void setCallEyeAction(void(*act)(float *x, float*y));
-
-protected:
-	void setEyeEvent(EyeEvent* eyeEvent);
+	void notifyChange (eye_event e);
+	virtual void startRecognition() = 0;
+	virtual void stopRecognition() = 0;
+	
+	void setEyeEvent(EyeEvent* ee);
 
 private: 	
-	 void (*action)(float*, float*); // deprectated 
 	 EyeEvent* eyeEvent;
 };
 

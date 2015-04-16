@@ -39,7 +39,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)\thirdparty;$(SolutionDir)\alchemy;$(SolutionDir)\thirdparty\EyeTribe\include;C:\boost\include\boost-1_57\boost;$(SolutionDir)\thirdparty\sphinx\sphinxbase\include;$(SolutionDir)\thirdparty\sphinx\sphinxbase\include\win32;$(SolutionDir)\thirdparty\sphinx\pocketsphinx\include;$(SolutionDir)\thirdparty\sphinx\pocketsphinx\src\libpocketsphinx;$(SolutionDir)\alchemy\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\thirdparty;$(SolutionDir)\alchemy;$(SolutionDir)\thirdparty\EyeTribe\include;C:\boost\include\boost-1_57;$(SolutionDir)\thirdparty\sphinx\sphinxbase\include;$(SolutionDir)\thirdparty\sphinx\sphinxbase\include\win32;$(SolutionDir)\thirdparty\sphinx\pocketsphinx\include;$(SolutionDir)\thirdparty\sphinx\pocketsphinx\src\libpocketsphinx;$(SolutionDir)\alchemy\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)\EyeTribe\;C:\boost\lib;$(SolutionDir)\Debug;C:\Users\Oleg\Documents\Development\sphinx\pocketsphinx\bin\Release;$(SolutionDir)\thirdparty\glew-1.12.0\lib\Release\Win32\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
