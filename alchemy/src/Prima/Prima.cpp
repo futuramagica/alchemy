@@ -1,5 +1,5 @@
 #include "Prima\Prima.h"
-
+#include <stdio.h>
 #include "assert.h"
 
 Prima* Prima::prima = NULL;
@@ -34,9 +34,9 @@ int Prima::checkReadiness(){
 	assert(Prima::hydrargyrum!=NULL);
 	assert(Prima::event_Manager!=NULL);
 	
-	assert(Prima::voice!=NULL);
+//	assert(Prima::voice!=NULL);
 	assert(Prima::eye!=NULL);
-	assert(Prima::gesture!=NULL);
+//	assert(Prima::gesture!=NULL);
 	
 	
 return 0;
@@ -48,27 +48,31 @@ int Prima::init(){
 	initInternallComponents();
 	checkReadiness();
 	
-
+	start();
 
 	return 0;
 };
 
 int Prima::initInternallComponents(){
 	
-	sol = new Sol();
+	sol = Sol::getInstance();
 	hydrargyrum = Hydrargyrum::getInstance();
 	event_Manager = Event_Manager::getInstance();
-
+	
+	ee = new EyeEvent(event_Manager);
+	eye->setEyeEvent(ee);
+	sol->setEyeRecogImpl(Prima::eye);
 
 
 	return 0; 
 };
 
 void Prima::start(){
-
-	int startEyeRecog();
-	int startGestureRecog();
-	int startVoiceRecog();
+	sol->startEventsListeners();
+	event_Manager->start_eye_to_hyd();
+	//startEyeRecog();
+	//int startGestureRecog();
+	//int startVoiceRecog();
 
 
 };
@@ -77,31 +81,17 @@ void Prima::start(){
 
 void Prima::stop(){
 
-	int startEyeRecog();
-	int startGestureRecog();
-	int startVoiceRecog();
+	
 
 
 };
 
-int Prima::startEyeRecog(){
 
 
-	return 0;
+Eye_Recog* Prima::getEye_Recog(){
+	return Prima::eye;
 };
 
-
-int Prima::startGestureRecog(){
-
-
-	return 0;
+void Prima::setEye_Recog(Eye_Recog* e){
+	Prima::eye=e;
 };
-
-
-int Prima::startVoiceRecog(){
-
-
-	return 0;
-
-};
-

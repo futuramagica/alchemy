@@ -13,10 +13,14 @@ protected:
 
 // internall
 class EyeEvent{
-public: 
-	void update(eye_event* e);
-protected: 
-	Event_Manager event_manager;
+public:
+	EyeEvent(Event_Manager* em);
+
+	void update(eye_event e);
+private: 
+	EyeEvent();
+	~EyeEvent();
+	Event_Manager* event_manager;
 };
 
 // internall

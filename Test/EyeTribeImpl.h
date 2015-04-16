@@ -5,13 +5,13 @@
 
 class EyeTribeImpl: public Eye_Recog, public gtl::IGazeListener {
 public: 
-// void recog();
- EyeTribeImpl(void(*action)(float *x, float *y));
+
+  EyeTribeImpl();
  ~EyeTribeImpl();
 
  void on_gaze_data( gtl::GazeData const &gazeData );
-
-
+ void startRecognition();
+ void stopRecognition();
 private: 
 	 gtl::GazeApi mApi;
 };

@@ -42,8 +42,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)\thirdparty;$(ProjectDir)\include;$(ProjectDir);$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)\thirdparty\glew-1.12.0\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\boost\include\boost-1_57;$(SolutionDir)\thirdparty;$(ProjectDir)\include;$(ProjectDir);$(IncludePath)</IncludePath>
+    <LibraryPath>C:\boost\lib;$(SolutionDir)\thirdparty\glew-1.12.0\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -115,8 +115,9 @@
     <ClCompile Include="src\Hydrargyrum\UserInput.cpp" />
     <ClCompile Include="src\Prima\Prima.cpp" />
     <ClCompile Include="src\Sol\Event_Manager.cpp" />
+    <ClCompile Include="src\Sol\HMI_Events.cpp" />
     <ClCompile Include="src\Sol\HMI_Interfaces.cpp" />
-    <ClCompile Include="src\Sol\HMI_Manager.cpp" />
+    <ClCompile Include="src\Sol\Sol.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

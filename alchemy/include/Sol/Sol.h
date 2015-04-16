@@ -4,37 +4,37 @@
 #include "HMI_Interfaces.h"
 #include <windows.h>
 
+#include <boost/thread/thread.hpp>
+#include <boost/lockfree/queue.hpp>
+#include <boost/atomic.hpp>
+
 class Sol {
 
 public: 
 
+	
+	static Sol* getInstance();
+
+
+	void startEventsListeners();
+
+
+	int destroy();
+
+	void setCmdRecogImpl(Voice_Cmd_Recog* c);
+	void setEyeRecogImpl(Eye_Recog* e);
+
+protected: 
+	void start_eye_recog_thread();
+	void start_eye_recog();
+
+private:
 	Sol();
 	~Sol();
 
-	Sol init();
-	int relase();
+	static Sol* sol;
 
-	void setCmdRecogImpl(Voice_Cmd_Recog c);
-	void setEyeRecogImpl(Eye_Recog e);
-
-	int update_eye_struct(eye_event e);
-	int update_voice_cmd_struct(voice_cmd_event c);
-	
-	eye_event get_eye_event();
-
-	void start_discover_thread();
-
-	DWORD WINAPI discover_function();
-
-	HANDLE th_cmd_event; 
-	HANDLE th_eye_event; 
-	
-
-
-private:
-	
-	
-	Eye_Recog eye_recog;
+	Eye_Recog* eye_recog;
 	Voice_Cmd_Recog cmd;
 	
 	eye_event eye;
