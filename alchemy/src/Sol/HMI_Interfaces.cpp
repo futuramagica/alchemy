@@ -13,3 +13,13 @@ void Eye_Recog::setEyeEvent(EyeEvent* ee){
 };
 
 
+void Voice_Cmd_Recog::notifyChange (voice_cmd_event cmd){
+
+	voiceEvent->update(cmd);
+};
+
+
+void  Voice_Cmd_Recog::setVoiceEvent(VoiceEvent* ve){
+
+	voiceEvent=ve;
+}; 

@@ -21,12 +21,16 @@ public:
 
 	int destroy();
 
-	void setCmdRecogImpl(Voice_Cmd_Recog* c);
+	void setVoiceRecogImpl(Voice_Cmd_Recog* v);
 	void setEyeRecogImpl(Eye_Recog* e);
 
 protected: 
 	void start_eye_recog_thread();
 	void start_eye_recog();
+
+
+	void start_voice_recog_thread();
+	void start_voice_recog();
 
 private:
 	Sol();
@@ -35,7 +39,7 @@ private:
 	static Sol* sol;
 
 	Eye_Recog* eye_recog;
-	Voice_Cmd_Recog cmd;
+	Voice_Cmd_Recog* voice_recog;
 	
 	eye_event eye;
 	voice_cmd_event cmd_event;

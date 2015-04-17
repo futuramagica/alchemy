@@ -26,9 +26,13 @@ private:
 // internall
 class VoiceEvent{
 public: 
-	void update(voice_cmd_t* e);
-protected: 
-	Event_Manager event_manager;
+	VoiceEvent(Event_Manager* em);
+
+	void update(voice_cmd_event v);
+private: 
+	VoiceEvent();
+	~VoiceEvent();
+	Event_Manager* event_manager;
 
 };
 #endif

@@ -27,7 +27,7 @@ public:
 	
 	
 	Voice_Cmd_Recog* getVoice_Cmd_Recog();
-	void setVoice_Cmd_Recog(Voice_Cmd_Recog* cmd);
+	void setVoice_Cmd_Recog(Voice_Cmd_Recog* v);
 
 	Eye_Recog* getEye_Recog();
 	void setEye_Recog(Eye_Recog* e);
@@ -63,7 +63,7 @@ private:
 	Event_Manager* event_Manager;
 	
 	EyeEvent* ee;
-
+	VoiceEvent* ve;
 
 	Voice_Cmd_Recog* voice;
 	Eye_Recog* eye;

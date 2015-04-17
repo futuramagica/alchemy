@@ -1,33 +1,9 @@
-﻿Build started 4/13/2015 9:05:09 PM.
+﻿Build started 4/17/2015 10:21:41 PM.
      1>Project "C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\Test\Test.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\Test.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt EyeTribeImpl.cpp P_Test.cpp SphinxRecogImpl.cpp THE_UI_EYE.cpp TheUI.cpp
-         EyeTribeImpl.cpp
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\hydrargyrum\hydrargyrum.h(6): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\sol\hmi_events.h(11): warning C4624: 'GestureEvent' : destructor could not be generated because a base class destructor is inaccessible
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\sol\hmi_events.h(20): warning C4624: 'EyeEvent' : destructor could not be generated because a base class destructor is inaccessible
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\sol\hmi_events.h(29): warning C4624: 'VoiceEvent' : destructor could not be generated because a base class destructor is inaccessible
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\test\eyetribeimpl.cpp(24): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\test\eyetribeimpl.cpp(24): warning C4305: 'argument' : truncation from 'double' to 'float'
-         Generating Code...
-         Compiling...
-         SphinxRecogImpl.cpp
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\test\sphinxrecogimpl.cpp(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\hydrargyrum\hydrargyrum.h(6): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\sol\hmi_events.h(11): warning C4624: 'GestureEvent' : destructor could not be generated because a base class destructor is inaccessible
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\sol\hmi_events.h(20): warning C4624: 'EyeEvent' : destructor could not be generated because a base class destructor is inaccessible
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\sol\hmi_events.h(29): warning C4624: 'VoiceEvent' : destructor could not be generated because a base class destructor is inaccessible
-         P_Test.cpp
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\hydrargyrum\hydrargyrum.h(6): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\sol\hmi_events.h(11): warning C4624: 'GestureEvent' : destructor could not be generated because a base class destructor is inaccessible
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\sol\hmi_events.h(20): warning C4624: 'EyeEvent' : destructor could not be generated because a base class destructor is inaccessible
-     1>c:\users\oleg\documents\visual studio 2010\projects\alchemy\alchemy\include\sol\hmi_events.h(29): warning C4624: 'VoiceEvent' : destructor could not be generated because a base class destructor is inaccessible
-         Generating Code...
-         Skipping... (no relevant changes detected)
-         TheUI.cpp
-         THE_UI_EYE.cpp
+         All outputs are up-to-date.
        ManifestResourceCompile:
          All outputs are up-to-date.
        Link:
@@ -39,6 +15,8 @@
          Debug\TheUI.obj
          Debug\THE_UI_EYE.obj
      1>EyeTribeImpl.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+     1>alchemy.lib(Event_Manager.obj) : warning LNK4248: unresolved typeref token (01000020) for 'boost.detail.win32._SECURITY_ATTRIBUTES'; image may not run
+     1>alchemy.lib(Sol.obj) : warning LNK4248: unresolved typeref token (01000024) for 'boost.detail.win32._SECURITY_ATTRIBUTES'; image may not run
      1>GazeApiLibD.lib(gazeapi.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'GazeApiLibD.lib(gazeapi.obj)' or at 'C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\Debug\vc100.pdb'; linking object as if no debug info
      1>GazeApiLibD.lib(gazeapi_parser.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'GazeApiLibD.lib(gazeapi_parser.obj)' or at 'C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\Debug\vc100.pdb'; linking object as if no debug info
      1>GazeApiLibD.lib(gazeapi_socket.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'GazeApiLibD.lib(gazeapi_socket.obj)' or at 'C:\Users\Oleg\Documents\Visual Studio 2010\Projects\alchemy\Debug\vc100.pdb'; linking object as if no debug info
@@ -55,4 +33,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.29
+Time Elapsed 00:00:01.47

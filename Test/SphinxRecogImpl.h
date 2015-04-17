@@ -14,14 +14,23 @@
 #include "pocketsphinx.h"
 #include "Sol\HMI_Interfaces.h"
 
+
+#include <boost/thread/thread.hpp>
+
+
+
 class SphinxRecogImpl : public Voice_Cmd_Recog{
 
 public: 
 	
 	
 	
-	 void init_recog(void(*act)(voice_cmd_t*));
+	 void init_recog();
 	 void recognize_from_microphone();
+
+	void startRecognition();
+	void stopRecognition();
+
 
 	ps_decoder_t *ps;
 	cmd_ln_t *config;

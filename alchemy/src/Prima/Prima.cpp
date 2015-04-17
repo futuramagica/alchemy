@@ -34,7 +34,7 @@ int Prima::checkReadiness(){
 	assert(Prima::hydrargyrum!=NULL);
 	assert(Prima::event_Manager!=NULL);
 	
-//	assert(Prima::voice!=NULL);
+	assert(Prima::voice!=NULL);
 	assert(Prima::eye!=NULL);
 //	assert(Prima::gesture!=NULL);
 	
@@ -63,6 +63,10 @@ int Prima::initInternallComponents(){
 	eye->setEyeEvent(ee);
 	sol->setEyeRecogImpl(Prima::eye);
 
+	ve = new VoiceEvent(event_Manager);
+	voice->setVoiceEvent(ve);
+	sol->setVoiceRecogImpl(Prima::voice);
+
 
 	return 0; 
 };
@@ -70,6 +74,7 @@ int Prima::initInternallComponents(){
 void Prima::start(){
 	sol->startEventsListeners();
 	event_Manager->start_eye_to_hyd();
+	event_Manager->start_voice_to_hyd();
 	//startEyeRecog();
 	//int startGestureRecog();
 	//int startVoiceRecog();
@@ -94,4 +99,14 @@ Eye_Recog* Prima::getEye_Recog(){
 
 void Prima::setEye_Recog(Eye_Recog* e){
 	Prima::eye=e;
+};
+
+
+Voice_Cmd_Recog* Prima::getVoice_Cmd_Recog(){
+return Prima::voice;
+};
+
+void Prima::setVoice_Cmd_Recog(Voice_Cmd_Recog* v){
+
+Prima::voice=v;
 };

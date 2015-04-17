@@ -19,9 +19,15 @@ void Sol::setEyeRecogImpl(Eye_Recog* e){
 };
 
 
+void Sol::setVoiceRecogImpl(Voice_Cmd_Recog* v){
+	voice_recog = v;
+};
+
+
+
 void Sol::startEventsListeners(){
 	start_eye_recog_thread();
-	
+	start_voice_recog_thread();
 };
 
 void Sol::start_eye_recog_thread(){
@@ -41,6 +47,15 @@ void Sol::start_eye_recog(){
    }
 };
 
+
+void Sol::start_voice_recog_thread(){
+	boost::thread voice_thread(&Sol::start_voice_recog,this);
+
+};
+
+void Sol::start_voice_recog(){
+	voice_recog->startRecognition();
+};
 
 Sol::Sol(){};
 

@@ -16,10 +16,10 @@ struct gesture_event{
 	double y_move;
 };
 
-enum  voice_cmd_t {sel};
+enum  voice_cmd_t {none,sel, reply, forward, close};
 
 struct voice_cmd_event{
-	voice_cmd_t* voice_cmd;
+	voice_cmd_t voice_cmd;
 };
 
 #endif  /* _INC_HMI_DATASTRUCTURE */

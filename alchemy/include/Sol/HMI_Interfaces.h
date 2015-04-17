@@ -7,10 +7,12 @@
 class Voice_Cmd_Recog{
 public: 
 	//that is only method should be used 
-	void notifyChange (voice_cmd_t* cmd);
-	//virtual void startRecognition();
-protected: 
-	void setVoiceEvent(VoiceEvent* voiceEvent);// deprectated 
+	void notifyChange (voice_cmd_event cmd);
+
+	virtual void startRecognition() = 0;
+	virtual void stopRecognition() = 0;
+	
+	void setVoiceEvent(VoiceEvent* ve); 
 
 private: 	
 	 VoiceEvent* voiceEvent;
@@ -21,7 +23,7 @@ private:
 class Gesture_Recog{
 public:
 	void notifyChange(gesture_event* g);
-	// virtual void runChange();
+	
 
 protected: 
 	void setGestureEvent(GestureEvent* gestureEvent);

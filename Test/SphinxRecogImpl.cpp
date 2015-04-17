@@ -3,14 +3,14 @@
 //ps_decoder_s * SphinxRecogImpl::ps = NULL;
 //cmd_ln_s * SphinxRecogImpl::config = NULL;
 
-void SphinxRecogImpl::init_recog(void(*act)(voice_cmd_t*)){
+void SphinxRecogImpl::init_recog(){
 
 	config = cmd_ln_init(NULL, ps_args(), TRUE,
-			     "-hmm", "c:\\Users\\Oleg\\Documents\\Development\\sphinx\\pocketsphinx\\model\\en-us\\en-us",
-			     "-lm", "c:\\Users\\Oleg\\Documents\\Development\\sphinx\\pocketsphinx\\model\\en-us\\en-us.lm.dmp",
-			     "-dict","c:\\Users\\Oleg\\Documents\\Development\\sphinx\\pocketsphinx\\model\\en-us\\cmudict-en-us.dict",
+			     "-hmm", "c:\\Users\\Oleg\\Documents\\Development\\models\\en-us\\en-us",
+			     "-lm",  "c:\\Users\\Oleg\\Documents\\Development\\models\\alchemy.lm",
+			     "-dict","c:\\Users\\Oleg\\Documents\\Development\\models\\alchemy.dic",
 			     NULL);
-        
+     err_set_logfile("sphinx.log");   
 	if (config == NULL)
 	    ps_default_search_args(config);
 	
@@ -31,6 +31,8 @@ void SphinxRecogImpl::init_recog(void(*act)(voice_cmd_t*)){
     int16 adbuf[2048];
     uint8 utt_started, in_speech;
     int32 k;
+	voice_cmd_event	voice_event;
+
     char const *hyp;
 
     if ((ad = ad_open_dev(cmd_ln_str_r(config, "-adcdev"),
@@ -61,11 +63,22 @@ void SphinxRecogImpl::init_recog(void(*act)(voice_cmd_t*)){
             if (hyp != NULL){
                 printf("%s\n", hyp);
 			
-				if (strcmp(hyp, "copy")==0){
-					cmd = sel;
-//					callVoiceAction(&cmd);
+				if (strcmp(hyp, "SELECT")==0){
+						voice_event.voice_cmd = sel;
+						notifyChange(voice_event);
 				}
-				
+				if (strcmp(hyp, "REPLY")==0){
+						voice_event.voice_cmd = reply;
+						notifyChange(voice_event);
+				}
+				if (strcmp(hyp, "FORWARD")==0){
+						voice_event.voice_cmd = forward;
+						notifyChange(voice_event);
+				}
+				if (strcmp(hyp, "CLOSE")==0){
+						voice_event.voice_cmd = close;
+						notifyChange(voice_event);
+				}
 			}
 
 
@@ -74,7 +87,18 @@ void SphinxRecogImpl::init_recog(void(*act)(voice_cmd_t*)){
             utt_started = FALSE;
             printf("READY....\n");
         }
-        Sleep(100);
+         boost::this_thread::sleep_for(boost::chrono::milliseconds(100));
     }
     ad_close(ad);
 };
+
+
+ void SphinxRecogImpl::startRecognition(){
+	
+	recognize_from_microphone();
+
+ };
+ 
+ void SphinxRecogImpl::stopRecognition(){
+ 
+ };

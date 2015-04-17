@@ -17,3 +17,15 @@ void EyeEvent::update(eye_event e){
 	event_manager->eye_event_q_push(e);
 	  
 };
+
+
+VoiceEvent::VoiceEvent(Event_Manager* em){
+
+	assert(em!=NULL);
+	event_manager=em;
+};
+
+
+void VoiceEvent::update(voice_cmd_event v){
+	event_manager->voice_event_q_push(v);
+};
