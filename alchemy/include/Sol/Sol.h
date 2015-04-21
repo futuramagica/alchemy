@@ -2,7 +2,7 @@
 #define _INC_SOL
 
 #include "HMI_Interfaces.h"
-#include <windows.h>
+
 
 #include <boost/thread/thread.hpp>
 #include <boost/lockfree/queue.hpp>
@@ -23,6 +23,8 @@ public:
 
 	void setVoiceRecogImpl(Voice_Cmd_Recog* v);
 	void setEyeRecogImpl(Eye_Recog* e);
+	void setGestureRecogImpl(Gesture_Recog* g);
+
 
 protected: 
 	void start_eye_recog_thread();
@@ -32,6 +34,10 @@ protected:
 	void start_voice_recog_thread();
 	void start_voice_recog();
 
+
+	void start_gesture_recog_thread();
+	void start_gesture_recog();
+
 private:
 	Sol();
 	~Sol();
@@ -40,9 +46,11 @@ private:
 
 	Eye_Recog* eye_recog;
 	Voice_Cmd_Recog* voice_recog;
-	
-	eye_event eye;
-	voice_cmd_event cmd_event;
+	Gesture_Recog* gesture_recog;
+
+
+	//eye_event eye;
+//	voice_cmd_event cmd_event;
 	
 	
 

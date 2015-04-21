@@ -4,10 +4,17 @@
 // internall 
 class GestureEvent{
 public: 
-	void update(gesture_event* g);
 
-protected: 
-	Event_Manager event_manager;
+
+	GestureEvent(Event_Manager* em);
+
+	void update(gesture_event g);
+
+private: 
+	Event_Manager* event_manager;
+	GestureEvent();
+	~GestureEvent();
+
 };
 
 

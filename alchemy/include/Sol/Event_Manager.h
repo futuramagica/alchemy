@@ -32,6 +32,11 @@ public:
 	voice_cmd_event voice_event_q_pop();
 	void voice_event_q_push(voice_cmd_event v);
 
+	// gesture updates routines 
+	void start_gesture_to_hyd();
+	gesture_event  gesture_event_q_pop();
+	void gesture_event_q_push(gesture_event g);
+
 private: 
 
 	Event_Manager(); 
@@ -43,12 +48,16 @@ private:
 	
 	void push_voice_to_hyd();
 
+	void push_gesture_to_hyd();
+
 	boost::lockfree::queue<eye_event>* eye_event_q; // eye q
 	boost::thread* eye_to_hyd_t;
 
 	boost::lockfree::queue<voice_cmd_event>* voice_event_q; // voice q
 	boost::thread* voice_to_hyd_t;
 	
+	boost::lockfree::queue<gesture_event>* gesture_event_q; // gesture q
+	boost::thread* gesture_to_hyd_t;
 	
 	static Event_Manager* event_Manager;
 

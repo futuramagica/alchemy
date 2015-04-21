@@ -23,3 +23,15 @@ void  Voice_Cmd_Recog::setVoiceEvent(VoiceEvent* ve){
 
 	voiceEvent=ve;
 }; 
+
+ 	
+void Gesture_Recog::notifyChange (gesture_event g){
+
+	gestureEvent->update(g);
+};
+
+
+void  Gesture_Recog::setGestureEvent(GestureEvent* ge){
+
+	gestureEvent=ge;
+}; 

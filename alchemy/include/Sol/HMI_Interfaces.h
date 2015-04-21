@@ -22,11 +22,12 @@ private:
 // external to API user 
 class Gesture_Recog{
 public:
-	void notifyChange(gesture_event* g);
+	void notifyChange(gesture_event g);
 	
-
-protected: 
-	void setGestureEvent(GestureEvent* gestureEvent);
+	virtual void startRecognition() = 0;
+	virtual void stopRecognition() = 0;
+	
+	void setGestureEvent(GestureEvent* ge);
 
 private: 
 	GestureEvent* gestureEvent;

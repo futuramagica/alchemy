@@ -33,12 +33,18 @@
     <ClCompile Include="P_Test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SoftKinectImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SphinxRecogImpl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="EyeTribeImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SoftKinectImpl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

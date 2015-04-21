@@ -8,8 +8,6 @@
 #include "Sol\Event_Manager.h"
 #include "Sol\HMI_Events.h"
 #include "Hydrargyrum\Hydrargyrum.h"
-#include "windows.h"
-#include "process.h"
 
 
 class Prima{
@@ -64,6 +62,7 @@ private:
 	
 	EyeEvent* ee;
 	VoiceEvent* ve;
+	GestureEvent* ge;
 
 	Voice_Cmd_Recog* voice;
 	Eye_Recog* eye;

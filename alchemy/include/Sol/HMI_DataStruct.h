@@ -8,15 +8,15 @@ struct eye_event{
 };
  
 
-enum gesture_t {click, move};
+enum gesture_t {no_gesture,click, move};
 
 struct gesture_event{
-	gesture_t* gesture;
+	gesture_t gesture;
 	double x_move;
 	double y_move;
 };
 
-enum  voice_cmd_t {none,sel, reply, forward, close};
+enum  voice_cmd_t {no_voice,sel, reply, forward, close};
 
 struct voice_cmd_event{
 	voice_cmd_t voice_cmd;

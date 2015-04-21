@@ -66,4 +66,3 @@ void EyeTribeImpl::on_gaze_data( gtl::GazeData const & gazeData )
    }
 }
 
-
