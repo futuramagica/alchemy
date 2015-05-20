@@ -7,6 +7,8 @@
 #include "UIDataStructures.h"
 #include "Sol\HMI_DataStruct.h"
 #include "UIElement.h"
+#include "ElementsList.h"
+
 
 class Compositor {
 

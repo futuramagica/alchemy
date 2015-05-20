@@ -82,22 +82,14 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ElementsList.h" />
     <ClInclude Include="include\Hydrargyrum\Compositor.h" />
     <ClInclude Include="include\Hydrargyrum\Cube.h" />
-    <ClInclude Include="include\Hydrargyrum\DummyInput.h" />
     <ClInclude Include="include\Hydrargyrum\EventInterface.h" />
-    <ClInclude Include="include\Hydrargyrum\EyeInput.h" />
     <ClInclude Include="include\Hydrargyrum\Hydrargyrum.h" />
-    <ClInclude Include="include\Hydrargyrum\LinkedList.h" />
-    <ClInclude Include="include\Hydrargyrum\MouseInput.h" />
-    <ClInclude Include="include\Hydrargyrum\Renderer.h" />
-    <ClInclude Include="include\Hydrargyrum\Scene.h" />
-    <ClInclude Include="include\Hydrargyrum\SimpleList.h" />
-    <ClInclude Include="include\Hydrargyrum\SimpleListElement.h" />
     <ClInclude Include="include\Hydrargyrum\Space.h" />
     <ClInclude Include="include\Hydrargyrum\UIDataStructures.h" />
     <ClInclude Include="include\Hydrargyrum\UIElement.h" />
-    <ClInclude Include="include\Hydrargyrum\UserInput.h" />
     <ClInclude Include="include\Prima\Prima.h" />
     <ClInclude Include="include\Sol\Event_Manager.h" />
     <ClInclude Include="include\Sol\HMI_DataStruct.h" />

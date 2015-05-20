@@ -3,6 +3,7 @@
 
 #include <list>
 
+
 enum ui_orientation {left, right, top, bottom, center};
 
 
@@ -21,8 +22,4 @@ struct ui_element {
 	ui_orientation orientation;
 };
 
-//// Need a change here that contradicts to current elements container in Scene
-struct ui_elements{
-	//std::list<UIElement> *elements;
-};
 #endif

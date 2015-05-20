@@ -60,34 +60,10 @@
     <ClInclude Include="include\Hydrargyrum\Cube.h">
       <Filter>Header Files\Hydrargyrum</Filter>
     </ClInclude>
-    <ClInclude Include="include\Hydrargyrum\DummyInput.h">
-      <Filter>Header Files\Hydrargyrum</Filter>
-    </ClInclude>
     <ClInclude Include="include\Hydrargyrum\EventInterface.h">
       <Filter>Header Files\Hydrargyrum</Filter>
     </ClInclude>
-    <ClInclude Include="include\Hydrargyrum\EyeInput.h">
-      <Filter>Header Files\Hydrargyrum</Filter>
-    </ClInclude>
     <ClInclude Include="include\Hydrargyrum\Hydrargyrum.h">
-      <Filter>Header Files\Hydrargyrum</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Hydrargyrum\LinkedList.h">
-      <Filter>Header Files\Hydrargyrum</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Hydrargyrum\MouseInput.h">
-      <Filter>Header Files\Hydrargyrum</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Hydrargyrum\Renderer.h">
-      <Filter>Header Files\Hydrargyrum</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Hydrargyrum\Scene.h">
-      <Filter>Header Files\Hydrargyrum</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Hydrargyrum\SimpleList.h">
-      <Filter>Header Files\Hydrargyrum</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Hydrargyrum\SimpleListElement.h">
       <Filter>Header Files\Hydrargyrum</Filter>
     </ClInclude>
     <ClInclude Include="include\Hydrargyrum\Space.h">
@@ -99,7 +75,7 @@
     <ClInclude Include="include\Hydrargyrum\UIElement.h">
       <Filter>Header Files\Hydrargyrum</Filter>
     </ClInclude>
-    <ClInclude Include="include\Hydrargyrum\UserInput.h">
+    <ClInclude Include="ElementsList.h">
       <Filter>Header Files\Hydrargyrum</Filter>
     </ClInclude>
   </ItemGroup>
