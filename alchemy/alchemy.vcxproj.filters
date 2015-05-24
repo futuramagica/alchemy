@@ -78,6 +78,15 @@
     <ClInclude Include="ElementsList.h">
       <Filter>Header Files\Hydrargyrum</Filter>
     </ClInclude>
+    <ClInclude Include="include\Hydrargyrum\CubicList.h">
+      <Filter>Header Files\Hydrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hydrargyrum\CubicListElement.h">
+      <Filter>Header Files\Hydrargyrum</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hydrargyrum\Floor.h">
+      <Filter>Header Files\Hydrargyrum</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Sol\HMI_Interfaces.cpp">
@@ -86,22 +95,7 @@
     <ClCompile Include="src\Prima\Prima.cpp">
       <Filter>Source Files\Prima</Filter>
     </ClCompile>
-    <ClCompile Include="src\Hydrargyrum\Renderer.cpp">
-      <Filter>Source Files\Hydrargyrum</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Hydrargyrum\Scene.cpp">
-      <Filter>Source Files\Hydrargyrum</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Hydrargyrum\SimpleList.cpp">
-      <Filter>Source Files\Hydrargyrum</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Hydrargyrum\SimpleListElement.cpp">
-      <Filter>Source Files\Hydrargyrum</Filter>
-    </ClCompile>
     <ClCompile Include="src\Hydrargyrum\UIElement.cpp">
-      <Filter>Source Files\Hydrargyrum</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Hydrargyrum\UserInput.cpp">
       <Filter>Source Files\Hydrargyrum</Filter>
     </ClCompile>
     <ClCompile Include="src\Hydrargyrum\Hydrargyrum.cpp">
@@ -115,6 +109,12 @@
     </ClCompile>
     <ClCompile Include="src\Sol\HMI_Events.cpp">
       <Filter>Source Files\Sol</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hydrargyrum\Compositor.cpp">
+      <Filter>Source Files\Hydrargyrum</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hydrargyrum\Floor.cpp">
+      <Filter>Source Files\Hydrargyrum</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

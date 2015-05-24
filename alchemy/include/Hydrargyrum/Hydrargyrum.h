@@ -12,7 +12,6 @@
 #include <glm-0.9.4.0\glm\gtc\matrix_transform.hpp>
 
 
-#include "common\shader.h"
 
 class Hydrargyrum{
 
@@ -20,8 +19,13 @@ class Hydrargyrum{
 		static Hydrargyrum* getInstance();
 		int initGraphics();
 		int initBuffers();
-		int mainUILoop();
-		int clear();
+		void mainUILoop();
+		void clear();
+
+
+		// setters and getters 
+		void setCompositor(Compositor* c );
+
 
 	private: 
 		Hydrargyrum();

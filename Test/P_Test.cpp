@@ -1,3 +1,5 @@
+/*
+
 #include "Prima\Prima.h"
 #include "EyeTribeImpl.h"
 #include "SphinxRecogImpl.h"
@@ -37,3 +39,4 @@ int main(){
 
 
 
+*/

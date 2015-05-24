@@ -36,6 +36,9 @@
     <ClCompile Include="SoftKinectImpl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Test_UI_3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SphinxRecogImpl.h">
@@ -47,5 +50,16 @@
     <ClInclude Include="SoftKinectImpl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\alchemy\Resources\TransformVertexShader_floor.vertexshader">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\alchemy\Resources\TextureFragmentShader_floor.fragmentshader">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\alchemy\Resources\floor.3ds">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

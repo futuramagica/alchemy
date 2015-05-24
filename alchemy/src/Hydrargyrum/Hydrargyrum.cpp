@@ -69,11 +69,8 @@ int Hydrargyrum::initGraphics(){
 	glBindVertexArray(VertexArrayID);
 
 
-	glEnable(GL_CULL_FACE);
+ 
 	
-	GLuint programID = LoadShaders( "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader" );
-	
-	GLuint programID2 = LoadShaders( "TransformVertexShader.vertexshader", "TextureFragmentShader_sec.fragmentshader" );
 
 return 0;
 };
@@ -83,7 +80,67 @@ return 0;
 int Hydrargyrum::initBuffers(){
 
 
+	std::list<UIElement*> el_list = compositor->getElements();
 
-
+	printf ("Elements size = %d", el_list.size());
+	
+	for (std::list<UIElement*>::iterator it = el_list.begin(); it != el_list.end(); it++){
+		
+		UIElement* ui = *it; 
+		
+		ui->init_ui_buffers();
+	}
+	
 return 0;
 };
+
+
+void Hydrargyrum::setCompositor(Compositor* c){
+
+	Hydrargyrum::compositor = c;
+};
+
+void Hydrargyrum::mainUILoop(){
+
+	
+	
+	do
+	{
+		glClearStencil(0);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT |GL_STENCIL_BUFFER_BIT);
+
+			compositor->makeMagic();
+					 
+		glfwSwapBuffers(Hydrargyrum::window);
+		glfwPollEvents();
+			 
+	}
+	while( glfwGetKey(Hydrargyrum::window, GLFW_KEY_ESCAPE ) != GLFW_PRESS &&
+		   glfwWindowShouldClose(Hydrargyrum::window) == 0 );
+
+//	Hydrargyrum::clear();
+
+};
+
+
+
+void Hydrargyrum::clear(){
+
+for (std::list<UIElement*>::iterator it = Hydrargyrum::compositor->getElements().begin(); it != Hydrargyrum::compositor->getElements().end(); it++){
+
+
+			UIElement* ui = *it; 
+			GLuint vertexbuffer = ui->getStructure().vertexbuffer;
+			glDeleteBuffers(1, &vertexbuffer);
+			//glDeleteBuffers(1, &uvbuffer);
+			//glDeleteBuffers(1, &normalbuffer);
+			GLuint elementbuffer = ui->getStructure().elementbuffer;
+			glDeleteBuffers(1, &elementbuffer);
+			glDeleteProgram(ui->getStructure().shaderID);
+			//glDeleteTextures(1, &Texture);
+			//glDeleteVertexArrays(1, &VertexArrayID); /// this should be corrected !!!!!!!!!!!!!!
+
+		}
+
+};
+

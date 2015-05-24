@@ -42,7 +42,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\boost\include\boost-1_57;$(SolutionDir)\thirdparty;$(ProjectDir)\include;$(ProjectDir);$(IncludePath)</IncludePath>
+    <IncludePath>C:\boost\include\boost-1_57;$(SolutionDir)\thirdparty;$(ProjectDir)\include;$(ProjectDir);$(SolutionDir)\thirdparty\assimp\include\;$(IncludePath)</IncludePath>
     <LibraryPath>C:\boost\lib;$(SolutionDir)\thirdparty\glew-1.12.0\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -85,7 +85,10 @@
     <ClInclude Include="ElementsList.h" />
     <ClInclude Include="include\Hydrargyrum\Compositor.h" />
     <ClInclude Include="include\Hydrargyrum\Cube.h" />
+    <ClInclude Include="include\Hydrargyrum\CubicList.h" />
+    <ClInclude Include="include\Hydrargyrum\CubicListElement.h" />
     <ClInclude Include="include\Hydrargyrum\EventInterface.h" />
+    <ClInclude Include="include\Hydrargyrum\Floor.h" />
     <ClInclude Include="include\Hydrargyrum\Hydrargyrum.h" />
     <ClInclude Include="include\Hydrargyrum\Space.h" />
     <ClInclude Include="include\Hydrargyrum\UIDataStructures.h" />
@@ -98,13 +101,10 @@
     <ClInclude Include="include\Sol\Sol.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Hydrargyrum\Compositor.cpp" />
+    <ClCompile Include="src\Hydrargyrum\Floor.cpp" />
     <ClCompile Include="src\Hydrargyrum\Hydrargyrum.cpp" />
-    <ClCompile Include="src\Hydrargyrum\Renderer.cpp" />
-    <ClCompile Include="src\Hydrargyrum\Scene.cpp" />
-    <ClCompile Include="src\Hydrargyrum\SimpleList.cpp" />
-    <ClCompile Include="src\Hydrargyrum\SimpleListElement.cpp" />
     <ClCompile Include="src\Hydrargyrum\UIElement.cpp" />
-    <ClCompile Include="src\Hydrargyrum\UserInput.cpp" />
     <ClCompile Include="src\Prima\Prima.cpp" />
     <ClCompile Include="src\Sol\Event_Manager.cpp" />
     <ClCompile Include="src\Sol\HMI_Events.cpp" />
