@@ -11,8 +11,12 @@ class Floor: public UIElement {
 public: 
 	Floor();
 	~Floor();
-	void draw();
+	void draw(glm::mat4 projectionMatrix, glm::mat4 viewMatrix);
+	
 
+protected: 
+
+	void initModelMatrix();
 
 };
 

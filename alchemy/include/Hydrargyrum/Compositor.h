@@ -15,7 +15,7 @@ class Compositor {
 public: 
 	void makeMagic(); // refresh elements on UI. 
 	static Compositor* getInstance();
-
+	void initLayout();
 	/// that is how i see events should be organized 
 //	UIElement inFocus(eye_event* e); // searching if element was looked, if so call putInFocus to chnage structure and then draw() to reflect actual graphics  
 	
@@ -36,8 +36,8 @@ private:
 	ui_elements ui_widget_container;
 
 	// managing of world coordinates. 
-	glm::mat4 ProjectionMatrix;
-	glm::mat4 ViewMatrix;
+	glm::mat4  projectionMatrix;
+	glm::mat4  viewMatrix;
 	GLFWwindow* window;
 };
 #endif

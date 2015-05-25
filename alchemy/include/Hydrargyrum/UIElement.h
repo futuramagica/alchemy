@@ -35,8 +35,10 @@ public:
 
 
 	void init_ui_buffers();
-	virtual void draw() = 0; // draw specific element behaviour  
-
+	virtual void draw(glm::mat4 projectionMatrix, glm::mat4 viewMatrix) = 0; // draw specific element behaviour  
+	
+	
+	
 	ui_element getStructure();
 
 
@@ -45,8 +47,10 @@ public:
 
 
 protected:
-
+	
 	ui_element my_structure;
+	
+	virtual void initModelMatrix() = 0;
 
 
 private: 

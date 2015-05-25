@@ -44,7 +44,7 @@ struct ui_element {
 	
 	
 	// OPENGL our manipulation matrices 
-	glm::mat4 ModelMatrix;
+	glm::mat4 modelMatrix;
 
 
 };
