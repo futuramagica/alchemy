@@ -141,6 +141,8 @@ GLuint UIElement::loadShaders(const char * vertex_file_path,const char * fragmen
 
 	UIElement::my_structure.shaderID = ProgramID;
 	UIElement::my_structure.MatrixID = glGetUniformLocation(UIElement::my_structure.shaderID, "MVP");
+	UIElement::my_structure.ViewMatrixID = glGetUniformLocation(UIElement::my_structure.shaderID, "V");
+	UIElement::my_structure.ModelMatrixID = glGetUniformLocation(UIElement::my_structure.shaderID, "M");
 
 	return ProgramID;
 
@@ -210,11 +212,21 @@ std::map<UIElement::PackedVertex,unsigned short>::iterator it = VertexToOutIndex
 
 ui_element UIElement::getStructure(){
 
-	return UIElement::my_structure;
+	return my_structure;
 };
 
 
 
 void UIElement::index_vertices(){
 	index_vertices(UIElement::my_structure.vertices,UIElement::my_structure.indices,UIElement::my_structure.indexed_vertices);
+};
+
+int UIElement::getIndex(){
+
+	return my_structure.hashCode;
+};
+
+void  UIElement::setIndex(int i){
+
+	my_structure.hashCode = i;
 };

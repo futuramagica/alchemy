@@ -61,5 +61,14 @@
     <None Include="..\alchemy\Resources\floor.3ds">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="..\alchemy\Resources\cubicList.3ds">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\alchemy\Resources\TransformVertexShader_cubicList.vertexshader">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\alchemy\Resources\TextureFragmentShader_cubicList.fragmentshader">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

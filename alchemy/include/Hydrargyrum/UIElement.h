@@ -35,20 +35,23 @@ public:
 
 
 	void init_ui_buffers();
+	virtual void initFocusShape() = 0; 
 	virtual void draw(glm::mat4 projectionMatrix, glm::mat4 viewMatrix) = 0; // draw specific element behaviour  
 	
-	
-	
+	// manage indices for element recognition, they should be hascodes 
+	int getIndex();
+	void  setIndex(int i);
+
 	ui_element getStructure();
 
+		ui_element my_structure;
 
-
-
+	
 
 
 protected:
 	
-	ui_element my_structure;
+
 	
 	virtual void initModelMatrix() = 0;
 

@@ -87,6 +87,9 @@
     <ClInclude Include="include\Hydrargyrum\Floor.h">
       <Filter>Header Files\Hydrargyrum</Filter>
     </ClInclude>
+    <ClInclude Include="include\Hydrargyrum\LayoutManager.h">
+      <Filter>Header Files\Hydrargyrum</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Sol\HMI_Interfaces.cpp">
@@ -114,6 +117,9 @@
       <Filter>Source Files\Hydrargyrum</Filter>
     </ClCompile>
     <ClCompile Include="src\Hydrargyrum\Floor.cpp">
+      <Filter>Source Files\Hydrargyrum</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hydrargyrum\CubicList.cpp">
       <Filter>Source Files\Hydrargyrum</Filter>
     </ClCompile>
   </ItemGroup>

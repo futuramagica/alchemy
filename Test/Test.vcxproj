@@ -40,8 +40,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)\thirdparty\Softkinetic\include;$(SolutionDir)\thirdparty\Softkinetic\include\iisu;$(SolutionDir)\thirdparty;$(SolutionDir)\alchemy;$(SolutionDir)\thirdparty\EyeTribe\include;C:\boost\include\boost-1_57;$(SolutionDir)\thirdparty\sphinx\sphinxbase\include;$(SolutionDir)\thirdparty\sphinx\sphinxbase\include\win32;$(SolutionDir)\thirdparty\sphinx\pocketsphinx\include;$(SolutionDir)\thirdparty\sphinx\pocketsphinx\src\libpocketsphinx;$(SolutionDir)\alchemy\include;$(SolutionDir)\thirdparty\assimp\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)\thirdparty\Softkinetic\lib;$(SolutionDir)\thirdparty\assimp\lib;$(SolutionDir)\thirdparty\EyeTribe\;C:\boost\lib;$(SolutionDir)\Debug;C:\Users\Oleg\Documents\Development\sphinx\pocketsphinx\bin\Release;$(SolutionDir)\thirdparty\glew-1.12.0\lib\Release\Win32\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)\thirdparty\Softkinetic\include;$(SolutionDir)\thirdparty\Softkinetic\include\iisu;$(SolutionDir)\thirdparty;$(SolutionDir)\alchemy;$(SolutionDir)\thirdparty\EyeTribe\include;C:\boost\include\boost-1_57;$(SolutionDir)\thirdparty\sphinx\sphinxbase\include;$(SolutionDir)\thirdparty\sphinx\sphinxbase\include\win32;$(SolutionDir)\thirdparty\sphinx\pocketsphinx\include;$(SolutionDir)\thirdparty\sphinx\pocketsphinx\src\libpocketsphinx;$(SolutionDir)\alchemy\include;$(SolutionDir)\thirdparty\assimp\include;$(SolutionDir)\thirdparty\bullet-2.81-rev2613\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\thirdparty\Softkinetic\lib;$(SolutionDir)\thirdparty\assimp\lib;$(SolutionDir)\thirdparty\EyeTribe\;C:\boost\lib;$(SolutionDir)\Debug;C:\Users\Oleg\Documents\Development\sphinx\pocketsphinx\bin\Release;$(SolutionDir)\thirdparty\glew-1.12.0\lib\Release\Win32\;$(SolutionDir)\thirdparty\bullet-2.81-rev2613\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -59,7 +59,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(SolutionDir)thirdparty\assimp\lib\assimpd.lib;iisuSDK.lib;$(SolutionDir)thirdparty\EyeTribe\GazeApiLibD.lib;$(SolutionDir)thirdparty\glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;glu32.lib;opengl32.lib;$(SolutionDir)\thirdparty\glew-1.12.0\lib\Release\win32\glew32.lib;$(SolutionDir)\thirdparty\glew-1.12.0\lib\Release\win32\glew32s.lib;alchemy.lib;$(SolutionDir)\thirdparty\sphinx\sphinxbase\sphinxbase.lib;$(SolutionDir)\thirdparty\sphinx\pocketsphinx\pocketsphinx.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)thirdparty\assimp\lib\assimpd.lib;iisuSDK.lib;$(SolutionDir)thirdparty\EyeTribe\GazeApiLibD.lib;$(SolutionDir)thirdparty\glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;glu32.lib;opengl32.lib;$(SolutionDir)\thirdparty\glew-1.12.0\lib\Release\win32\glew32.lib;$(SolutionDir)\thirdparty\glew-1.12.0\lib\Release\win32\glew32s.lib;alchemy.lib;$(SolutionDir)\thirdparty\sphinx\sphinxbase\sphinxbase.lib;$(SolutionDir)\thirdparty\sphinx\pocketsphinx\pocketsphinx.lib;BulletCollision.lib;BulletDynamics.lib;LinearMath.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
@@ -97,8 +97,11 @@
     <ClInclude Include="SphinxRecogImpl.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\alchemy\Resources\cubicList.3ds" />
     <None Include="..\alchemy\Resources\floor.3ds" />
+    <None Include="..\alchemy\Resources\TextureFragmentShader_cubicList.fragmentshader" />
     <None Include="..\alchemy\Resources\TextureFragmentShader_floor.fragmentshader" />
+    <None Include="..\alchemy\Resources\TransformVertexShader_cubicList.vertexshader" />
     <None Include="..\alchemy\Resources\TransformVertexShader_floor.vertexshader" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

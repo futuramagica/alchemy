@@ -38,7 +38,7 @@ int Hydrargyrum::initGraphics(){
 
 
 
-	Hydrargyrum::window = glfwCreateWindow( 1920, 1080, "Alchemy", glfwGetPrimaryMonitor(), NULL);
+	Hydrargyrum::window =window = glfwCreateWindow( 1024, 768, "Misc 05 - version with custom Ray-OBB code", NULL, NULL);// glfwCreateWindow( 1920, 1080, "Alchemy", glfwGetPrimaryMonitor(), NULL);
 	
 	if( window == NULL ){
 		fprintf( stderr, "Failed to open GLFW window. If you have an Intel GPU, they are not 3.3 compatible. Try the 2.1 version of the tutorials.\n" );
@@ -57,13 +57,13 @@ int Hydrargyrum::initGraphics(){
 	}
 
 	glfwSetInputMode(Hydrargyrum::window, GLFW_STICKY_KEYS, GL_TRUE);
-	glfwSetCursorPos(Hydrargyrum::window, 1024/2, 768/2);
+	//glfwSetCursorPos(Hydrargyrum::window, 1024/2, 768/2);
 
 	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
 
 	glEnable(GL_DEPTH_TEST);
 	glDepthFunc(GL_LESS); 
-	
+	glEnable(GL_CULL_FACE);
 	GLuint VertexArrayID;
 	glGenVertexArrays(1, &VertexArrayID);
 	glBindVertexArray(VertexArrayID);
@@ -144,3 +144,9 @@ for (std::list<UIElement*>::iterator it = Hydrargyrum::compositor->getElements()
 
 };
 
+
+
+GLFWwindow* Hydrargyrum::getWindow(){
+
+	return Hydrargyrum::window;
+};

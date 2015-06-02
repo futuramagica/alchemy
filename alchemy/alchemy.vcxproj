@@ -42,8 +42,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\boost\include\boost-1_57;$(SolutionDir)\thirdparty;$(ProjectDir)\include;$(ProjectDir);$(SolutionDir)\thirdparty\assimp\include\;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\boost\lib;$(SolutionDir)\thirdparty\glew-1.12.0\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\boost\include\boost-1_57;$(SolutionDir)\thirdparty;$(ProjectDir)\include;$(ProjectDir);$(SolutionDir)\thirdparty\assimp\include\;$(SolutionDir)\thirdparty\bullet-2.81-rev2613\include\;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\boost\lib;$(SolutionDir)\thirdparty\glew-1.12.0\lib;$(SolutionDir)\thirdparty\bullet-2.81-rev2613\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -90,6 +90,7 @@
     <ClInclude Include="include\Hydrargyrum\EventInterface.h" />
     <ClInclude Include="include\Hydrargyrum\Floor.h" />
     <ClInclude Include="include\Hydrargyrum\Hydrargyrum.h" />
+    <ClInclude Include="include\Hydrargyrum\LayoutManager.h" />
     <ClInclude Include="include\Hydrargyrum\Space.h" />
     <ClInclude Include="include\Hydrargyrum\UIDataStructures.h" />
     <ClInclude Include="include\Hydrargyrum\UIElement.h" />
@@ -102,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hydrargyrum\Compositor.cpp" />
+    <ClCompile Include="src\Hydrargyrum\CubicList.cpp" />
     <ClCompile Include="src\Hydrargyrum\Floor.cpp" />
     <ClCompile Include="src\Hydrargyrum\Hydrargyrum.cpp" />
     <ClCompile Include="src\Hydrargyrum\UIElement.cpp" />

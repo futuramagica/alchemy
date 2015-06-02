@@ -25,7 +25,7 @@ class Hydrargyrum{
 
 		// setters and getters 
 		void setCompositor(Compositor* c );
-
+		GLFWwindow* getWindow();
 
 	private: 
 		Hydrargyrum();
