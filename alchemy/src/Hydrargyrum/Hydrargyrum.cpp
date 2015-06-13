@@ -38,7 +38,7 @@ int Hydrargyrum::initGraphics(){
 
 
 
-	Hydrargyrum::window =window = glfwCreateWindow( 1024, 768, "Misc 05 - version with custom Ray-OBB code", NULL, NULL);// glfwCreateWindow( 1920, 1080, "Alchemy", glfwGetPrimaryMonitor(), NULL);
+	Hydrargyrum::window  = glfwCreateWindow( 1024, 768, "Alchemy", NULL, NULL);//glfwCreateWindow( 1920, 1080, "Alchemy", glfwGetPrimaryMonitor(), NULL);
 	
 	if( window == NULL ){
 		fprintf( stderr, "Failed to open GLFW window. If you have an Intel GPU, they are not 3.3 compatible. Try the 2.1 version of the tutorials.\n" );
@@ -63,7 +63,7 @@ int Hydrargyrum::initGraphics(){
 
 	glEnable(GL_DEPTH_TEST);
 	glDepthFunc(GL_LESS); 
-	glEnable(GL_CULL_FACE);
+	//glEnable(GL_CULL_FACE);
 	GLuint VertexArrayID;
 	glGenVertexArrays(1, &VertexArrayID);
 	glBindVertexArray(VertexArrayID);
@@ -103,11 +103,17 @@ void Hydrargyrum::setCompositor(Compositor* c){
 void Hydrargyrum::mainUILoop(){
 
 	
+
+	
 	
 	do
 	{
-		glClearStencil(0);
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT |GL_STENCIL_BUFFER_BIT);
+
+		
+
+
+	 
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT  );
 
 			compositor->makeMagic();
 					 

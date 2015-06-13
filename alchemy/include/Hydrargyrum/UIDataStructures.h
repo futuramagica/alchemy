@@ -11,6 +11,7 @@
 #include <glm-0.9.4.0\glm\gtc\matrix_transform.hpp>
 #include <glm-0.9.4.0\glm\gtc\quaternion.hpp>
 #include <glm-0.9.4.0\glm\gtx\quaternion.hpp>
+#include <glm-0.9.4.0\glm\gtx\euler_angles.hpp> 
 
 #pragma managed(push, off)
 #include <btBulletCollisionCommon.h>
@@ -63,7 +64,7 @@ struct ui_element {
 	glm::quat orientation;
 
 	// used for collision detection
-	btCollisionShape* collisionShape ;
+	btConvexHullShape* collisionShape ;
 	
 };
 

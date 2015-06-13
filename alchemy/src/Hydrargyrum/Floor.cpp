@@ -2,8 +2,8 @@
 
 
 Floor::Floor(){
-	initModelMatrix();
-	Floor::initFocusShape();
+	//this->initModelMatrix();
+	
 };
 
 Floor::~Floor(){
@@ -19,13 +19,20 @@ void Floor::draw(glm::mat4 projectionMatrix, glm::mat4 viewMatrix){
 		glUseProgram(getStructure().shaderID);
 
 	
-		glm::mat4 MVP = projectionMatrix * viewMatrix * getStructure().modelMatrix;
+		glm::mat4 RotationMatrix = glm::toMat4(my_structure.orientation);
+		glm::mat4 TranslationMatrix = glm::translate(glm::mat4(), my_structure.position);
+		glm::mat4 ModelMatrix = TranslationMatrix * RotationMatrix;
 
-		glUniformMatrix4fv(getStructure().MatrixID, 1, GL_FALSE, &MVP[0][0]);
+		glm::mat4 MVP = projectionMatrix * viewMatrix * ModelMatrix;
+
+		
+		glUniformMatrix4fv(my_structure.MatrixID, 1, GL_FALSE, &MVP[0][0]);
+		glUniformMatrix4fv(my_structure.ModelMatrixID, 1, GL_FALSE, &ModelMatrix[0][0]);
+		glUniformMatrix4fv(my_structure.ViewMatrixID, 1, GL_FALSE, &viewMatrix[0][0]);
 
 
 		glEnableVertexAttribArray(0);
-		glBindBuffer(GL_ARRAY_BUFFER, getStructure().vertexbuffer);
+		glBindBuffer(GL_ARRAY_BUFFER, my_structure.vertexbuffer);
 		glVertexAttribPointer(
 			0,                  // attribute
 			3,                  // size
@@ -35,11 +42,11 @@ void Floor::draw(glm::mat4 projectionMatrix, glm::mat4 viewMatrix){
 			(void*)0            // array buffer offset
 		);
 
-		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, getStructure().elementbuffer);
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, my_structure.elementbuffer);
 		glPolygonMode( GL_FRONT_AND_BACK, GL_FILL );
 		glDrawElements(
 			GL_TRIANGLES,      // mode
-			getStructure().indices.size(),    // count
+			my_structure.indices.size(),    // count
 			GL_UNSIGNED_SHORT,   // type
 			(void*)0           // element array buffer offset
 		);
@@ -51,33 +58,37 @@ void Floor::draw(glm::mat4 projectionMatrix, glm::mat4 viewMatrix){
 
 void Floor::initModelMatrix(){
 		
+	printf("\n CALLED INITMATRIX \n");
+
+
+
 	
-	my_structure.position = glm::vec3 (2,3,2);
-	my_structure.orientation = glm::quat(glm::vec3(10, 10, 10));
 
 
-	glm::mat4 RotationMatrix = glm::toMat4(my_structure.orientation);
+	my_structure.position = glm::vec3(0,0,0);
+	 	my_structure.orientation = glm::quat(glm::vec3(45, 0, 0));
+
+	 
+ 
+	 glm::mat4 RotationMatrix = glm::toMat4(my_structure.orientation);
 	glm::mat4 TranslationMatrix = glm::translate(glm::mat4(), my_structure.position);
 	glm::mat4 model = TranslationMatrix * RotationMatrix;
 
-	/*model = glm::rotate(
-            model,
-            -115.0f,
-            glm::vec3(1.0f, 0.0f, 0.0f)
-        );*/
-
-		//model = glm::scale(model,glm::vec3(3.0f,2.5f,2.5f));
+	my_structure.modelMatrix = model;
 		
 		
-		my_structure.modelMatrix = model;
-		
-		
-		//ModelMatrix = glm::translate(ModelMatrix, glm::vec3(10.0f, 0.0f, 30.0f));
+	 
 };
 
 
 void Floor::initFocusShape(){
 
-	my_structure.collisionShape  = new btBoxShape(btVector3(7.0f,7.0f,0.1f));
+	//my_structure.collisionShape  = new btBoxShape(btVector3(7.0f,7.0f,0.1f));
+	my_structure.collisionShape = new btConvexHullShape();
+
+	for(int i=0; i<my_structure.vertices.size(); i++){
+		printf("Adding elements x = %d", my_structure.vertices[i].x);
+		my_structure.collisionShape->addPoint(btVector3(my_structure.vertices[i].x,my_structure.vertices[i].y,my_structure.vertices[i].z));
+	}
 
 };

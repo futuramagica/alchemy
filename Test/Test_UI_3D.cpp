@@ -4,11 +4,16 @@
 
 int main(){
 
+	
+
+
+
 	Hydrargyrum* hyd = Hydrargyrum::getInstance();
 	Compositor* c = Compositor::getInstance();
 	
 	hyd->setCompositor(c);
 	hyd->initGraphics(); //this needs to go before any buffers initialization
+	c->initLayout();
 	c->setWindow(hyd->getWindow());
 
 	Floor *f = new Floor();
@@ -20,7 +25,8 @@ int main(){
 	f->loadModel("c:\\Users\\Oleg\\Documents\\Visual Studio 2010\\Projects\\alchemy\\alchemy\\Resources\\floor.3ds");
 	c->addUIElement(f);
 	f->index_vertices();
-
+	f->initModelMatrix();
+	f->initFocusShape();
 
 
 	CubicList *cubicList = new CubicList();
@@ -30,13 +36,17 @@ int main(){
 
 
 	cubicList->loadModel("c:\\Users\\Oleg\\Documents\\Visual Studio 2010\\Projects\\alchemy\\alchemy\\Resources\\cubicList.3ds");
-	c->addUIElement(cubicList);
+ 	c->addUIElement(cubicList);
 	cubicList->index_vertices();
+	cubicList->initModelMatrix();
+	cubicList->initFocusShape();
+
+	hyd->initBuffers();
 
 	c->initElementsIndicies();
 	c->initdynamicsWorld();
 
-	hyd->initBuffers();
+	
 	hyd->mainUILoop();
 	//system("pause");
 }

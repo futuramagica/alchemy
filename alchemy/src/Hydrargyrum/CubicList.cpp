@@ -47,7 +47,7 @@ void CubicList::draw(glm::mat4 projectionMatrix, glm::mat4 viewMatrix){
 
 
 		
-		glPolygonMode( GL_FRONT_AND_BACK, GL_FILL );
+	//	glPolygonMode( GL_FRONT_AND_BACK, GL_FILL );
 
 
 
@@ -65,47 +65,17 @@ void CubicList::draw(glm::mat4 projectionMatrix, glm::mat4 viewMatrix){
 
 
 void CubicList::initModelMatrix(){
-
-		//glm::mat4 model =glm::mat4(1.0f);// glm::scale(glm::mat4(1.0f),glm::vec3(1.5f,1.5f,0.5f)); 
-		
-		my_structure.position = glm::vec3 (0,0,0);//glm::vec3(rand()%20-10, rand()%20-10, rand()%20-10);//
-	my_structure.orientation = glm::quat(glm::vec3(90,0, 0));//glm::quat(glm::vec3(rand()%360, rand()%360, rand()%360));;//glm::quat(glm::vec3(10, 10, 10));
+ 
+	my_structure.position = glm::vec3 (5.0f,0.0f,0.0f);
+	my_structure.orientation = glm::quat(glm::vec3(-90.0f,45.0f, 0.0f));
 
 	
 	glm::mat4 RotationMatrix = glm::toMat4(my_structure.orientation);
 	glm::mat4 TranslationMatrix = glm::translate(glm::mat4(), my_structure.position);
 	glm::mat4 model = TranslationMatrix * RotationMatrix;
 	
-
-
-		/*UIElement::my_structure.modelMatrix = glm::rotate(
-            UIElement::my_structure.modelMatrix,
-            -90.0f,
-            glm::vec3(1.0f, 0.0f, 0.0f)
-        );
-
-		*/
-
-		//model = glm::rotate(
-  //          model,
-  //          -90.0f,
-  //          glm::vec3(1.0f, 0.0f, 0.0f)
-  //      );
-
-	
-		//model = glm::rotate(
-  //         model,
-  //          -90.0f,
-  //          glm::vec3(0.0f, 1.0f, 0.0f)
-  //      );
-
-		//model = glm::translate(model, glm::vec3(12.0f, 0.0f, 0.0f));
-		//model = glm::translate(model, glm::vec3(0.0f, -28.0f, 0.0f));
-		//model = glm::translate(model, glm::vec3(0.0f, 0.0f, 5.0f));
-
-
-		my_structure.modelMatrix = model;
-		//UIElement::my_structure.modelMatrix = glm::scale(UIElement::my_structure.modelMatrix,glm::vec3(0.3f,0.5f,0.5f));
+	 my_structure.modelMatrix = model;
+	 
 
 		
 
@@ -113,5 +83,14 @@ void CubicList::initModelMatrix(){
 
 
 void CubicList::initFocusShape(){
-	my_structure.collisionShape  = new btBoxShape(btVector3(8.0f,10.0f,1.0f));
+	//my_structure.collisionShape  = new btBoxShape(btVector3(8.0f,10.0f,1.0f));
+	my_structure.collisionShape = new btConvexHullShape();
+	printf("SIZE = %d \n", my_structure.indexed_vertices.size()); 
+	for(int i=0; i<my_structure.vertices.size(); i++){
+		printf("Adding elements x = %f \n", my_structure.vertices[i].x);
+			printf("Adding elements y = %f \n", my_structure.vertices[i].y);
+				printf("Adding elements z = %f \n", my_structure.vertices[i].z);
+		my_structure.collisionShape->addPoint(btVector3(my_structure.vertices[i].x,my_structure.vertices[i].y,my_structure.vertices[i].z));
+	}
+
 };

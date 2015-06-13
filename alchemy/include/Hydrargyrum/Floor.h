@@ -14,10 +14,9 @@ public:
 	void draw(glm::mat4 projectionMatrix, glm::mat4 viewMatrix);
 
 	void initFocusShape();
-
-protected: 
-
-		void initModelMatrix();
+	void initModelMatrix();
+ 
+		
 
 };
 

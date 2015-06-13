@@ -46,14 +46,14 @@ public:
 
 		ui_element my_structure;
 
-	
-
-
-protected:
-	
-
-	
 	virtual void initModelMatrix() = 0;
+
+
+ 
+	
+
+	
+	
 
 
 private: 

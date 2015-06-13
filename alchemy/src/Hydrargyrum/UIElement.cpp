@@ -40,7 +40,7 @@ void UIElement::loadModel(const char * path,
 				out_vertices.push_back(tmp_v);
 		}
 	}
-
+	
 };
 
 
@@ -168,6 +168,8 @@ void UIElement::index_vertices(
 		std::vector<unsigned short> & out_indices,
 		std::vector<glm::vec3> & out_vertices){
 
+		
+
 std::map<UIElement::PackedVertex,unsigned short> VertexToOutIndex;
 
 	// For each input vertex
@@ -189,7 +191,7 @@ std::map<UIElement::PackedVertex,unsigned short> VertexToOutIndex;
 			VertexToOutIndex[ packed ] = newindex;
 		}
 	}
-
+	
 };
 
 
