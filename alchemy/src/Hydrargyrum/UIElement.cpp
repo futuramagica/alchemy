@@ -224,11 +224,24 @@ void UIElement::index_vertices(){
 };
 
 int UIElement::getIndex(){
-
-	return my_structure.hashCode;
+	int i = my_structure.hashCode; 
+	return i;
 };
 
 void  UIElement::setIndex(int i){
 
 	my_structure.hashCode = i;
+};
+
+void UIElement::resizeElement(float scale){
+	glm::mat4 model  =  my_structure.modelMatrix;
+	my_structure.modelMatrix = glm::scale(model,glm::vec3(scale,scale,scale)); 
+
+};
+
+
+void UIElement::resizeCollisionShape(float scale){
+
+	my_structure.collisionShape->setLocalScaling(btVector3(scale,scale,scale));
+
 };

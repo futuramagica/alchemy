@@ -48,86 +48,41 @@ std::list<UIElement*> Compositor::getElements(){
 
 void Compositor::initLayout(){
 
-
-
-//	projectionMatrix =  glm::perspective(90.0f, 4.0f / 3.0f, 0.1f, 100.0f);
-//
-//
-//	glm::vec3 position = glm::vec3(0,0,0);
-//
-//	glm::vec3 look=  glm::normalize(position);
-//
-//	float yaw = glm::degrees(float(atan2(look.z, look.x)+3.14159265358979323846));
-//	float pitch = glm::degrees(asin(look.y));
-//	float rX,rY,rz;
-//	rX = glm::radians(yaw);
-//	rY = glm::radians(pitch);
-//	rz = glm::radians(0.0);
-//
-// 
-//
-//	glm::mat4 R = glm::yawPitchRoll((float)rX, (float)rY, (float)rz); 
-//
-//
-//
-//	glm::vec3 l = glm::vec3(R*glm::vec4(0,0,1,0));
-//	glm::vec3 tgt  = position+l;
-//glm::vec3	up   = glm::vec3(R*glm::vec4(0,1,0,0));
-//glm::vec3	right = glm::cross(l, up);
-//	viewMatrix = glm::lookAt(position, tgt, up);
-
-
-
-
-
-
-
-
-	/*projectionMatrix =  glm::perspective(60.0f, 4.0f / 3.0f, 0.1f, 100.0f);
-  
-
-	viewMatrix = glm::lookAt(
-								glm::vec3(0.0f,40.0f,0.0f),           
-								glm::vec3(0.0f,10.0f,0.0f), 
-								glm::vec3( 1.0f,0.0f,0.0f)  
-						   );*/
 	 
-
-	 
-	projectionMatrix = glm::perspective(45.0f, 4.0f / 3.0f, 0.1f, 100.0f);
+	projectionMatrix = glm::perspective(90.0f, 4.0f / 3.0f, 0.1f, 100.0f);
 	
+ 	float horizontalAngle = 3.14f;
+	float verticalAngle =0.0f;/// problems here 
 
-	//float horizontalAngle = 3.14f;
-	//float verticalAngle =0.0f;/// problems here 
+	glm::vec3 direction(
+		cos(verticalAngle) * sin(horizontalAngle), 
+		sin(verticalAngle),
+		cos(verticalAngle) * cos(horizontalAngle)
+	);
 
-	//glm::vec3 direction(
-	//	cos(verticalAngle) * sin(horizontalAngle), 
-	//	sin(verticalAngle),
-	//	cos(verticalAngle) * cos(horizontalAngle)
-	//);
+	glm::vec3 position = glm::vec3( 0.0, 10.0, 32.0 ); 
 
-	//glm::vec3 position = glm::vec3( 0.0, 10.0, 32.0 ); 
+	glm::vec3 right = glm::vec3(
+		sin(horizontalAngle - 3.14f/2.0 ), 
+		0,
+		cos(horizontalAngle - 3.14f/2.0 )
+	);
 
-	//glm::vec3 right = glm::vec3(
-	//	sin(horizontalAngle - 3.14f/2.0 ), 
-	//	0,
-	//	cos(horizontalAngle - 3.14f/2.0 )
-	//);
+	// Up vector
+	glm::vec3 up = glm::cross( right, direction );
 
-	//// Up vector
-	//glm::vec3 up = glm::cross( right, direction );
+	viewMatrix =  glm::lookAt(
+								position,           // Camera is here
+								position+direction, // and looks here : at the same position, plus "direction"
+								up                  // Head is up (set to 0,-1,0 to look upside-down)
+						   );
 
-	//viewMatrix =  glm::lookAt(
-	//							position,           // Camera is here
-	//							position+direction, // and looks here : at the same position, plus "direction"
-	//							up                  // Head is up (set to 0,-1,0 to look upside-down)
-	//					   );
-	
-	viewMatrix = glm::lookAt(
+		
+	/*viewMatrix = glm::lookAt(
 								glm::vec3(0.0f,0.0f,30.0f),           
 								glm::vec3(0.0f,0.0f,0.0f), 
 								glm::vec3(0.0f,-1.0f,0.0f)  
-						   );
+						   );*/
 	
 	 
 };
@@ -147,26 +102,6 @@ void Compositor::ScreenPosToWorldRay(
 
 
 	float t =0.0f;
-	//t =   (1.0f- sin((45.0* 3.14) / 180 ))  ;
-
-				/*	printf("Y con = %f \n",((((float)mouseY/(float)screenHeight - 0.5f) * 2.0f ) *(-1.0f)));
-						printf("Y con = %f \n",((float)mouseX/(float)screenWidth  - 0.5f) * 2.0f);
-					printf("Y   = %f \n",t);
-				*///printf("Y = %d \n",mouseY);
-
-// The ray Start and End positions, in Normalized Device Coordinates (Have you read Tutorial 4 ?)
-	//glm::vec4 lRayStart_NDC(
-	//	ray_start.x, // [0,1024] -> [-1,1]
-	//	ray_start.y, // [0, 768] -> [-1,1]
-	//	-1.0, // The near plane maps to Z=-1 in Normalized Device Coordinates
-	//	1.0f
-	//);
-	//glm::vec4 lRayEnd_NDC(
-	//	ray_end.x,
-	//	ray_end.y,
-	//	0.0,
-	//	1.0f
-	//);
 
 
 
@@ -207,10 +142,6 @@ void Compositor::ScreenPosToWorldRay(
 	lRayEnd_world   /=lRayEnd_world   .w;
 
 
-	// Faster way (just one inverse)
-	//glm::mat4 M = glm::inverse(ProjectionMatrix * ViewMatrix);
-	//glm::vec4 lRayStart_world = M * lRayStart_NDC; lRayStart_world/=lRayStart_world.w;
-	//glm::vec4 lRayEnd_world   = M * lRayEnd_NDC  ; lRayEnd_world  /=lRayEnd_world.w;
 
 
 	glm::vec3 lRayDir_world(lRayEnd_world - lRayStart_world);
@@ -233,7 +164,7 @@ void Compositor::focusCheck(){
 		nbFrames++;
 		if ( currentTime - lastTime >= 1.0 ){ // If last prinf() was more than 1sec ago
 			// printf and reset
-			printf("%f ms/frame\n", 1000.0/double(nbFrames));
+		//	printf("%f ms/frame\n", 1000.0/double(nbFrames));
 			nbFrames = 0;
 			lastTime += 1.0;
 		}
@@ -246,7 +177,7 @@ void Compositor::focusCheck(){
 		dynamicsWorld->stepSimulation(deltaTime, 7);
 
 
-	if (glfwGetMouseButton(Compositor::window, GLFW_MOUSE_BUTTON_LEFT)){
+//	if (glfwGetMouseButton(Compositor::window, GLFW_MOUSE_BUTTON_LEFT)){
 			
 			glm::vec3 out_origin;
 			glm::vec3 out_direction;
@@ -260,22 +191,12 @@ void Compositor::focusCheck(){
 			int posY = (int) Y; 
 
 
-	//glm::vec3 pos = glm::vec3 (0.0f,0.0f,0.0f);
-	//glm::quat orientation = glm::quat(glm::vec3(0.0f,0.0f, 0.0f));
-
-	//
-	//glm::mat4 RotationMatrix = glm::toMat4( orientation);
-	//glm::mat4 TranslationMatrix = glm::translate(glm::mat4(),  pos);
-	//glm::mat4 model = TranslationMatrix * RotationMatrix;
-	//
-
-
-
+ 
 
 
 			 ScreenPosToWorldRay(
 				X, Y ,//+80,
-				1024, 768, 
+				1920, 1080,
 				Compositor::viewMatrix, 
 				Compositor::projectionMatrix, 
 				out_origin, 
@@ -289,21 +210,50 @@ void Compositor::focusCheck(){
 			dynamicsWorld->rayTest(btVector3(out_origin.x, out_origin.y, out_origin.z), btVector3(out_direction.x, out_direction.y, out_direction.z), RayCallback);
 			if(RayCallback.hasHit()) {
 			
-				int* i = (int*)RayCallback.m_collisionObject->getUserPointer();
-				printf("DETECTED index = %d \n",i);
+					int* i ;
+					i = (int*) RayCallback.m_collisionObject->getUserPointer();
+					printf(" DETECTED = %d \n" , i);
 
-//				glm::scale(glm::mat4(1.0f),glm::vec3(1.5f,1.5f,0.5f)); 
+				if (Compositor::ui_widget_container.inFocus ==NULL){
+						setFocus(i);
+					    getElementbyIndex(i)->resizeElement(1.5f);
+						getElementbyIndex(i)->resizeCollisionShape(1.5f);
+				}
 
+				if (Compositor::ui_widget_container.inFocus !=NULL){
+						
+					
+					if (!((int *)Compositor::ui_widget_container.inFocus->getIndex()==i)){
+					
+					   Compositor::ui_widget_container.inFocus->resizeElement(12.0f/18.0f);
+					   Compositor::ui_widget_container.inFocus->resizeCollisionShape(1.0f);
+						setFocus(i);
+						
+					   Compositor::ui_widget_container.inFocus->resizeElement(1.5f);
+					   Compositor::ui_widget_container.inFocus->resizeCollisionShape(1.5f);
+					}
+
+ 				}
 
 			}
 			else {
+			
+
+				if (Compositor::ui_widget_container.inFocus != NULL){
+					Compositor::ui_widget_container.inFocus->resizeElement(12.0f/18.0f);
+					Compositor::ui_widget_container.inFocus->resizeCollisionShape(1.0f);
+					Compositor::ui_widget_container.inFocus = NULL;
+					printf("NO NULL DETECTED \n");
+				}
+				
+
 				printf("NOT DETECTED \n");
 			}
 			
 				
 			
 			
-	}
+	//}
 };
 
 void Compositor::setWindow(GLFWwindow* w){
@@ -311,7 +261,8 @@ void Compositor::setWindow(GLFWwindow* w){
 };
 
 void Compositor::initElementsIndicies(){
-	int index;
+	int index = 0;
+	Compositor::ui_widget_container.inFocus =NULL;
 	for (std::list<UIElement*>::iterator it = Compositor::ui_widget_container.elements.begin(); it != Compositor::ui_widget_container.elements.end(); it++){
 			index++;
 			int i = index ;
@@ -367,6 +318,8 @@ void Compositor::initdynamicsWorld(){
 		// Small hack : store the mesh's index "i" in Bullet's User Pointer.
 		// Will be used to know which object is picked. 
 		// A real program would probably pass a "MyGameObjectPointer" instead.
+
+		//printf ("ELEMENT INDEX SET TO = %d \n", ui->getIndex());
 		rigidBody->setUserPointer((int*)ui->getIndex());
 
 	}
@@ -377,4 +330,35 @@ void Compositor::initdynamicsWorld(){
 
 btDiscreteDynamicsWorld* Compositor::getDynamics(){
 	return dynamicsWorld;
+};
+
+
+void Compositor::setFocus(int* index){
+
+	for (std::list<UIElement*>::iterator it = Compositor::ui_widget_container.elements.begin(); it != Compositor::ui_widget_container.elements.end(); it++){
+	
+			UIElement* ui = *it; 
+
+			if ((int *)ui->getIndex()==index){
+				Compositor::ui_widget_container.inFocus = *it;
+				printf("DETECTED SET = %d \n", Compositor::ui_widget_container.inFocus->getIndex());
+			}
+			
+	}
+
+};
+
+
+
+UIElement* Compositor::getElementbyIndex(int* index){
+
+	for (std::list<UIElement*>::iterator it = Compositor::ui_widget_container.elements.begin(); it != Compositor::ui_widget_container.elements.end(); it++){
+	
+			UIElement* ui = *it; 
+
+			if ((int *)ui->getIndex()==index) 
+				return *it;
+	}
+	return NULL;
+	
 };

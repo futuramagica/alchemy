@@ -31,6 +31,8 @@ struct ui_element {
 	
 	int hashCode;
 	
+	bool infocus;  
+
 	double border;
 	int texture;
 	int color;

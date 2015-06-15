@@ -55,6 +55,8 @@ protected:
 	);
 
 	 
+	void setFocus(int* index);
+	UIElement* getElementbyIndex(int* index);
 
 private:
 	Compositor();

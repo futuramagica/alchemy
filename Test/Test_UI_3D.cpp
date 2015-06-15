@@ -23,7 +23,7 @@ int main(){
 
 
 	f->loadModel("c:\\Users\\Oleg\\Documents\\Visual Studio 2010\\Projects\\alchemy\\alchemy\\Resources\\floor.3ds");
-	c->addUIElement(f);
+	//c->addUIElement(f);
 	f->index_vertices();
 	f->initModelMatrix();
 	f->initFocusShape();

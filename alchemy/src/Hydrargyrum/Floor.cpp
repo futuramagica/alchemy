@@ -19,15 +19,13 @@ void Floor::draw(glm::mat4 projectionMatrix, glm::mat4 viewMatrix){
 		glUseProgram(getStructure().shaderID);
 
 	
-		glm::mat4 RotationMatrix = glm::toMat4(my_structure.orientation);
-		glm::mat4 TranslationMatrix = glm::translate(glm::mat4(), my_structure.position);
-		glm::mat4 ModelMatrix = TranslationMatrix * RotationMatrix;
+ 
 
-		glm::mat4 MVP = projectionMatrix * viewMatrix * ModelMatrix;
+		glm::mat4 MVP = projectionMatrix * viewMatrix * my_structure.modelMatrix;
 
 		
 		glUniformMatrix4fv(my_structure.MatrixID, 1, GL_FALSE, &MVP[0][0]);
-		glUniformMatrix4fv(my_structure.ModelMatrixID, 1, GL_FALSE, &ModelMatrix[0][0]);
+		glUniformMatrix4fv(my_structure.ModelMatrixID, 1, GL_FALSE, &my_structure.modelMatrix[0][0]);
 		glUniformMatrix4fv(my_structure.ViewMatrixID, 1, GL_FALSE, &viewMatrix[0][0]);
 
 
@@ -58,12 +56,6 @@ void Floor::draw(glm::mat4 projectionMatrix, glm::mat4 viewMatrix){
 
 void Floor::initModelMatrix(){
 		
-	printf("\n CALLED INITMATRIX \n");
-
-
-
-	
-
 
 	my_structure.position = glm::vec3(0,0,0);
 	 	my_structure.orientation = glm::quat(glm::vec3(45, 0, 0));
@@ -87,7 +79,6 @@ void Floor::initFocusShape(){
 	my_structure.collisionShape = new btConvexHullShape();
 
 	for(int i=0; i<my_structure.vertices.size(); i++){
-		printf("Adding elements x = %d", my_structure.vertices[i].x);
 		my_structure.collisionShape->addPoint(btVector3(my_structure.vertices[i].x,my_structure.vertices[i].y,my_structure.vertices[i].z));
 	}
 

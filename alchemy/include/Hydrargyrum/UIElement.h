@@ -43,16 +43,13 @@ public:
 	void  setIndex(int i);
 
 	ui_element getStructure();
-
-		ui_element my_structure;
+	ui_element my_structure;
 
 	virtual void initModelMatrix() = 0;
 
 
- 
-	
-
-	
+	void resizeElement(float scale);
+	void resizeCollisionShape(float scale);
 	
 
 
