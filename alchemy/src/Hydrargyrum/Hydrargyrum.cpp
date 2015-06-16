@@ -38,7 +38,7 @@ int Hydrargyrum::initGraphics(){
 
 	//glfwCreateWindow( 1024, 768, "Alchemy", NULL, NULL);
 
-	Hydrargyrum::window  = glfwCreateWindow( 1920, 1080, "Alchemy", glfwGetPrimaryMonitor(), NULL);
+	Hydrargyrum::window  = glfwCreateWindow( 1024, 768, "Alchemy", NULL, NULL);//glfwCreateWindow( 1920, 1080, "Alchemy", glfwGetPrimaryMonitor(), NULL);
 	
 	if( window == NULL ){
 		fprintf( stderr, "Failed to open GLFW window. If you have an Intel GPU, they are not 3.3 compatible. Try the 2.1 version of the tutorials.\n" );

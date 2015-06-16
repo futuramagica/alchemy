@@ -96,13 +96,13 @@ void Compositor::ScreenPosToWorldRay(
 	glm::vec3& out_direction            // Ouput : Direction, in world space, of the ray that goes "through" the mouse.
 ){
 
-	glm::vec3 ray_start = glm::unProject(glm::vec3(mouseX, mouseY, 0.0), ViewMatrix, ProjectionMatrix, glm::vec4(0.0f, 0.0f, screenWidth, screenHeight));
+	/*glm::vec3 ray_start = glm::unProject(glm::vec3(mouseX, mouseY, 0.0), ViewMatrix, ProjectionMatrix, glm::vec4(0.0f, 0.0f, screenWidth, screenHeight));
 
 	glm::vec3 ray_end = glm::unProject(glm::vec3(mouseX, mouseY, 1.0), ViewMatrix, ProjectionMatrix, glm::vec4(0.0f, 0.0f, screenWidth, screenHeight));
 
 
 	float t =0.0f;
-
+*/
 
 
 
@@ -196,7 +196,7 @@ void Compositor::focusCheck(){
 
 			 ScreenPosToWorldRay(
 				X, Y ,//+80,
-				1920, 1080,
+				 1024, 768,
 				Compositor::viewMatrix, 
 				Compositor::projectionMatrix, 
 				out_origin, 
